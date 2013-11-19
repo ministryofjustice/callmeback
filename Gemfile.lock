@@ -55,6 +55,5 @@ DEPENDENCIES
   fog
   haml
   nanoc
-  sass
   systemu
   uglifier
