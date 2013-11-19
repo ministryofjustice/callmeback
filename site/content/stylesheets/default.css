@@ -1,0 +1,1201 @@
+@import "reset.css";
+@import "typography.css";
+
+body { background: #FBFDFA; font-family: helvetica;
+font-size: 0.9em;}
+hr { color: #ccc; background-color: #ccc; height: 1px; border: none; }
+
+a, a:link { color: #333; text-decoration: underline; }
+a:visited { color: #0F2B5E; }
+a:hover, a:active, a:focus { color: #fff; background-color: #32660f; }
+
+#head a, #foot a, #nav a, div.sectionbox a, #adviceboxes a{ text-decoration: none; color: #000; }
+#head a:hover, #head a:active, #head a:focus, 
+#foot a:hover, #foot a:active, #foot a:focus, 
+#nav a:hover, #nav a:active, #nav a:focus, 
+#adviceboxes a:hover, #adviceboxes a:active, #adviceboxes a:focus, 
+.backtotop a:hover, .backtotop a:active, .backtotop a:focus{ color: #fff; }
+
+div#head {    border-bottom: solid 3px black; }
+div#logo {float: left; font-size: 2em; float: right; border-left: 2px solid black; padding-left: 10px; width: 100%; margin-bottom: 1.5em;}
+
+.backtotop a:hover, .backtotop a:active, .backtotop a:focus{ background-image: none; background-color: #32660f; }
+
+#head a, #foot a, #nav a, div.sectionbox a, #adviceboxes a{ text-decoration: none; color: #000; }
+form fieldset {border:none;}
+.hideacc {
+	position: absolute;
+	left: -40000px;
+	width: 0;
+	height: 0;
+	overflow:hidden;
+}
+.hide_tab{
+	position: absolute;
+	left: -40000px;
+	overflow:hidden;
+	width: 165px;
+	width: 0;
+}
+.hide_tab:active, .hide_tab:focus {
+	text-decoration: none;
+	text-align: center; 
+	background-color: #32660f;
+	color: #FFF;
+	font-weight: bold;
+	border-left: 1px solid #FFF;
+	padding: 4px;
+	margin-left: 1px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 250px;
+}
+
+/****************** access_keys *****************/
+#access_keys {
+	/*position: absolute;
+	height: 1px;
+	width: 1px;
+	left: -1000px;*/
+	float: left;
+}
+#access_keys ul, #access_keys li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+
+#container { width: 800px; margin: 0 auto ; padding: 0 50px; background: #FBFDFA;}
+#containerborder { width: 800px; margin: 0 auto ; padding: 0 50px; background: #DEF1D1;}
+#border { border-left: 2px solid #00398B; margin: 0 -9px; padding: 0 9px; background: #FBFDFA;}
+
+#head { overflow: hidden; height: 1%; padding-top: 10px; }
+#head ul { display: block; text-align: right; margin: 4px 0 8px; }
+#head li { display: inline; padding: 0 6px ; }
+#head ul.langNavList { height: 21px; zoom: 1;}
+#head ul.langNavList li { border-right: 1px dashed gray; height: 21px; zoom: 1;}
+#head ul.langNavList li.lastListRight { border-right: none; }
+#head ul.subNavList li { border-right: 1px solid #000; }
+#head ul.subNavList li.lastListRight {  border-right: none; }
+#head p.strap { text-align: right; color: #013888; margin: 5px 10px 10px 0; font-size: 1.6em;  line-height: 1em; }
+#head p.smaller { font-size: 1.6em; margin-bottom: 12px; }
+#logo { float: left; }
+
+#nav ul, ul.alsoList, .sectionbox ul, .leftgreenbox ul, ul.options{ list-style-type: none; }
+#nav ul, #nav li, ul.alsoList, ul.alsoList li, .sectionbox ul, .leftgreenbox ul{ padding: 0; margin: 0; }
+
+#nav { background: url(../images/new/bar.gif) no-repeat top left #EDF5E8;}
+#nav a { font-weight: bold; font-size: 1.1em; }
+#nav ul { margin: 0; width: 800px; height: 39px; }
+#nav li { float: left; line-height: 38px; background: url(../images/new/nav_divider.gif) no-repeat top right; text-align: center; }
+#nav li.double { line-height:19px !important; min-height: 39px; }
+#nav li.smaller { font-size: 0.9em; }
+
+#nav li.home { width: 120px; }
+#nav li.adv { width: 160px; }
+#nav li.aid { width: 190px; }
+#nav li.adviser { width: 190px; }
+#nav li.about { width: 140px; background: none; }
+#nav li.short { line-height: 20px; padding-top: 4px;}
+
+#nav li.homeon { width: 120px; background: url(../images/new/nav_home_on.gif) no-repeat top right; }
+#nav li.advon { width: 160px; background: url(../images/new/nav_on.gif) no-repeat top right; }
+#nav li.aidon { width: 190px; background: url(../images/new/nav_on.gif) no-repeat top right; }
+#nav li.adviseron{ width: 190px; background: url(../images/new/nav_on.gif) no-repeat top right; }
+#nav li.abouton { width: 140px; background: url(../images/new/nav_about_on.gif) no-repeat top right; }
+#nav li.homeon a, #nav li.advon a, #nav li.aidon a, #nav li.adviseron a, #nav li.abouton a { color: #fff; }
+
+#search { overflow: hidden; height: 1%; background: url(../images/new/search_bg.gif) no-repeat bottom left #EDF5E8; }
+#search p.strap { float: left; margin: 1em 0 1em 1.5em; width: 61%; }
+#search p.strap, #search form p label  { color: #013888; font-size: 1.1em; font-weight: bold; }
+#search form { float: right; margin: 1em 1.5em 0; }
+#search form p { margin: 0 0 10px ; }
+#search form input { border: 1px solid #5AAC26; }
+#search form input.submit { border: 1px solid #32660f; background: #32660f; color: #fff; font-weight: bold; cursor: pointer; }
+
+#adviceboxes { overflow: hidden; height: 1%; margin-bottom: 13px; }
+div.fourcol { width: 192px; float: left; margin-right: 10px; }
+div.last { margin-right: 0; }
+div.top { margin-bottom: 7px; }
+div.box { min-height: 130px; }
+div.tall { min-height: 270px; font-size: 1.1em; padding-right: 15px; }
+div.box h3 { margin: 0; padding: 15px 20px 5px; }
+div.box h3 a { font-weight: bold; }
+div.box ul { margin: 0; padding: 5px 5px 20px 85px; list-style-type: disc;}
+div.box li { font-size: 0.9em; line-height: 1.2em; }
+div.box p { padding: 0 20px 5px; margin: .8em 0; }
+
+#education { background: url(../images/new/1a.gif) no-repeat top left; }
+#education:hover { background: url(../images/new/1.gif) no-repeat top left; }
+#employment { background: url(../images/new/5a.gif) no-repeat top left; }
+#employment:hover { background: url(../images/new/5.gif) no-repeat top left; }
+#debt { background: url(../images/new/2a.gif) no-repeat top left; }
+#debt:hover { background: url(../images/new/2.gif) no-repeat top left; }
+#family { background: url(../images/new/6a.gif) no-repeat top left; }
+#family:hover { background: url(../images/new/6.gif) no-repeat top left; }
+#benefit { background: url(../images/new/3a.gif) no-repeat top left; }
+#benefit:hover { background: url(../images/new/3.gif) no-repeat top left; }
+#government { background: url(../images/new/7a.gif) no-repeat top left; }
+#government:hover { background: url(../images/new/7.gif) no-repeat top left; }
+#housing { background: url(../images/new/4a.gif) no-repeat top left; }
+#housing:hover { background: url(../images/new/4.gif) no-repeat top left; }
+#police { background: url(../images/new/9a.gif) no-repeat top left; }
+#police:hover { background: url(../images/new/9.gif) no-repeat top left; }
+#speak { background: url(../images/new/8.gif) no-repeat top left; }
+#speak h3, #speak span, #speakt h3, #speakt span, #speakt2 h3, #speakt2 span { color: #013888; }
+#speak span, #speakt span, #speakt2 span { font-weight: bold; }
+#speak p, #speakt p, #speakt2 p { padding: 5px 10px 5px 55px; font-size: 0.9em; line-height: 1.2em; margin: 0; }
+#speak .call, #speakt .call, #speakt2 .call { background: url(../images/new/1a.jpg) no-repeat 20px 2px; }
+#speak .find, #speakt .find, #speakt2 .find { background: url(../images/new/1b.jpg) no-repeat 20px 0; }
+
+div.taller { min-height: 150px; }
+#educationt { background: url(../images/new/1at.gif) no-repeat top left; }
+#educationt:hover { background: url(../images/new/1t.gif) no-repeat top left; }
+#employmentt { background: url(../images/new/5at.gif) no-repeat top left; }
+#employmentt:hover { background: url(../images/new/5t.gif) no-repeat top left; }
+#debtt { background: url(../images/new/2at.gif) no-repeat top left; }
+#debtt:hover { background: url(../images/new/2t.gif) no-repeat top left; }
+#familyt { background: url(../images/new/6at.gif) no-repeat top left; }
+#familyt:hover { background: url(../images/new/6t.gif) no-repeat top left; }
+#benefitt { background: url(../images/new/3at.gif) no-repeat top left; }
+#benefitt:hover { background: url(../images/new/3t.gif) no-repeat top left; }
+#governmentt { background: url(../images/new/7at.gif) no-repeat top left; }
+#governmentt:hover { background: url(../images/new/7t.gif) no-repeat top left; }
+#housingt { background: url(../images/new/4at.gif) no-repeat top left; }
+#housingt:hover { background: url(../images/new/4t.gif) no-repeat top left; }
+#policet { background: url(../images/new/9at.gif) no-repeat top left; }
+#policet:hover { background: url(../images/new/9t.gif) no-repeat top left; }
+#speakt { background: url(../images/new/8t.gif) no-repeat top left; }
+#speakt2 { background: url(../images/new/8t2.gif) no-repeat top left; }
+
+#infoboxes { overflow: hidden; height: 1%; }
+#infoboxes p { padding: 10px ; margin: 0; }
+div.twocol { width: 394px; float: left; margin-right: 10px; }
+div.last { margin-right: 0; }
+div.orangebox { margin-bottom: 20px; overflow: hidden; height: 1%; background: url(../images/new/orange_body.gif) no-repeat bottom left; }
+div.orangebox h3 { background: url(../images/new/orange_head.gif) no-repeat top left; margin: 0; padding: 5px 10px; border-bottom: 1px solid white; font-weight: bold; }
+div.pinkbox { margin-bottom: 20px; overflow: hidden; height: 1%; background: url(../images/new/pink_body.gif) no-repeat bottom left;}
+div.pinkbox h3 { background: url(../images/new/pink_head.gif) no-repeat top left; margin: 0; padding: 5px 10px; border-bottom: 1px solid white; font-weight: bold; }
+div.greenbox { margin-bottom: 20px; overflow: hidden; height: 1%; background: url(../images/new/green_body.gif) no-repeat bottom left; }
+div.greenbox h3 { background: url(../images/new/green_head.gif) no-repeat top left; margin: 0; padding: 5px 10px; ; border-bottom: 1px solid white; font-weight: bold; }
+div.greenbox h4 { color: #186D10; margin: 10px 10px 0; }
+img.infopic { float: right; border: 1px solid white; margin: 0 0 10px 10px; }
+
+div.piccy{padding: 0;margin: 0;}
+#foot ul { display: block; padding-bottom: 1em; margin-bottom: 0;}
+#foot li { display: inline; padding: 0 1em; border-right: 1px solid black; }
+#foot li.first { padding-left: 0; }
+#foot li.last { border: none; }
+#foot.smaller ul { margin-left: 1em; }
+#foot.smaller li { padding: 0 0.5em; }
+
+#foot p.accreditations{ margin: 0; padding: 0 0 10px 0; }
+#foot p.accreditations img{ vertical-align: middle; margin-right: 20px; }
+#foot p.accreditations a:hover, #foot p.accreditations a:active, #foot p.accreditations a:focus{ background: none; }
+
+div.border { width: 798px; background: url(../images/new/footer.gif) no-repeat ; padding: 10px; margin-left: -9px; padding-bottom: 40px; }
+div.border ul { margin-top: 3em; }
+
+.hide { display: none; }
+
+#content { clear: right; }
+#leftpanel { float: left; width: 184px; }
+#rightpanel { margin-left: 202px; }
+
+body.bslbody #rightpanel { margin-left: 0 !important; width: 100%; }
+
+div.speakto h4 { background: url(../images/new/speakto/narrow_top.gif) no-repeat top left; padding: 5px 10px; margin: 0; border-bottom: 1px solid white; font-weight: bold; }
+div.speakto  { background: url(../images/new/speakto/narrow_bottom.gif) no-repeat bottom left #f2f2f2; }
+div.speakto p { margin: 0 10px; }
+div.speakto ul { margin: 10px 0 0; list-style-type: disc; list-style-position: inside;}
+div.speakto ul li { padding: 5px 10px; }
+
+/* # Section Pages # */
+
+/* # General Layout # */
+.sec { overflow: hidden; height: 1%; margin:  0; }
+.sec h1, .sec h2, .sec h3 { border-bottom: 1px solid white; margin: 0; padding: .5em 10px; font-weight: bold;}
+.secb { padding:10px 10px 10px 110px; border-bottom: 1px solid white; margin: 0; min-height: 98px; }
+.secbf, .secp { padding: 10px; border-bottom: 1px solid white; margin: 0; }
+.secp a { text-decoration: underline; }
+ul.secp, ul.secp li { margin-left: 15px; }
+.borderless { border: none; }
+
+img.eleafleticon{vertical-align: middle; margin-right: 8px;}
+
+.interest p, .interest ul, .interest ol, .interest table { margin: .8em 3em; }
+.interest ul { list-style-type: disc; list-style-position: inside; }
+.interest li { margin: .2em 0 }
+.interest {margin-top:10px;}
+
+.sectionbox { margin-bottom: 1.4em; }
+.sectionbox h4 { padding: .8em 10px; margin: 0; border-bottom: 1px solid white; font-weight: bold; }
+.sectionbox ul { margin: 0; padding-bottom: 20px; }
+.sectionbox li { padding: 10px 0; border-bottom: 1px solid white;  }
+.sectionbox a { margin: 0 10px; padding-left: 20px; display: block; line-height: 1.2em  }
+
+.options { overflow: hidden; height: 1%; padding: 0 10px; margin: 0 0 .5em 0; }
+.options li { float: left; width: 32%; }
+.options a { padding-left: 20px; display: block; margin: .5em 0; }
+
+.contents { overflow: hidden; height: 1%; margin-bottom: 1em; }
+.contents ul { float: left; margin: 0 1em; }
+.contents li { padding: 5px 0; }
+.contents a { padding-left: 20px; display: block; line-height: 1.4em; }
+.contents h4 { margin: 1em 1em 0; font-weight: bold; }
+
+.function  { padding: 0 .5em; padding-left: 100px; margin: 10px; height: 30px; }
+.function li { float: left; width: 30%; }
+.function a { padding-left: 30px; padding-top: 5px; display: block; height: 30px; }
+.function a:hover, .function a:focus, .function a:active { color: #000; }
+a.listen { background: url(../images/new/snd.gif) no-repeat left top; }
+a.download { background: url(../images/new/down.gif) no-repeat left top; }
+a.watch { background: url(../images/new/movie.gif) no-repeat left top; }
+a.print { background: url(../images/new/print.gif) no-repeat left top; }
+
+#edu a.listen { background-image: url(../images/new/edu/snd.gif); }
+#edu a.download { background-image: url(../images/new/edu/down.gif); }
+#edu a.watch { background-image: url(../images/new/edu/movie.gif); }
+#edu a.print { background-image: url(../images/new/edu/print.html); }
+
+#deb a.listen { background-image: url(../images/new/deb/snd.html); }
+#deb a.download { background-image: url(../images/new/deb/down.html); }
+#deb a.watch { background-image: url(../images/new/deb/movie.html); }
+#deb a.print { background-image: url(../images/new/deb/print.html); }
+	
+#ben a.listen { background-image: url(../images/new/ben/snd.html); }
+#ben a.download { background-image: url(../images/new/ben/down.html); }
+#ben a.watch { background-image: url(../images/new/ben/movie.html); }
+#ben a.print { background-image: url(../images/new/ben/print.html); }
+
+#hou a.listen { background-image: url(../images/new/hou/snd.html); }
+#hou a.download { background-image: url(../images/new/hou/down.html); }
+#hou a.watch { background-image: url(../images/new/hou/movie.html); }
+#hou a.print { background-image: url(../images/new/hou/print.html); }
+
+#emp a.listen { background-image: url(../images/new/emp/snd.html); }
+#emp a.download { background-image: url(../images/new/emp/down.html); }
+#emp a.watch { background-image: url(../images/new/emp/movie.html); }
+#emp a.print { background-image: url(../images/new/emp/print.html); }
+
+#fam a.listen { background-image: url(../images/new/fam/snd.html); }
+#fam a.download { background-image: url(../images/new/fam/down.html); }
+#fam a.watch { background-image: url(../images/new/fam/movie.html); }
+#fam a.print { background-image: url(../images/new/fam/print.html); }
+
+#gov a.listen { background-image: url(../images/new/gov/snd.html); }
+#gov a.download { background-image: url(../images/new/gov/down.html); }
+#gov a.watch { background-image: url(../images/new/gov/movie.html); }
+#gov a.print { background-image: url(../images/new/gov/print.html); }
+
+#imm a.listen { background-image: url(../images/new/imm/snd.html); }
+#imm a.download { background-image: url(../images/new/imm/down.html); }
+#imm a.watch { background-image: url(../images/new/imm/movie.html); }
+#imm a.print { background-image: url(../images/new/imm/print.html); }
+
+#hea a.listen { background-image: url(../images/new/hea/snd.html); }
+#hea a.download { background-image: url(../images/new/hea/down.html); }
+#hea a.watch { background-image: url(../images/new/hea/movie.html); }
+#hea a.print { background-image: url(../images/new/hea/print.html); }
+
+#pol a.listen { background-image: url(../images/new/pol/snd.html); }
+#pol a.download { background-image: url(../images/new/pol/down.html); }
+#pol a.watch { background-image: url(../images/new/pol/movie.html); }
+#pol a.print { background-image: url(../images/new/pol/print.html); }
+
+#cons a.listen { background-image: url(../images/new/cons/snd.html); }
+#cons a.download { background-image: url(../images/new/cons/down.html); }
+#cons a.watch { background-image: url(../images/new/cons/movie.html); }
+#cons a.print { background-image: url(../images/new/cons/print.html); }
+
+#tra a.listen { background-image: url(../images/new/tra/snd.html); }
+#tra a.download { background-image: url(../images/new/tra/down.html); }
+#tra a.watch { background-image: url(../images/new/tra/movie.html); }
+#tra a.print { background-image: url(../images/new/tra/print.html); }
+
+#env a.listen { background-image: url(../images/new/env/snd.html); }
+#env a.download { background-image: url(../images/new/env/down.html); }
+#env a.watch { background-image: url(../images/new/env/movie.html); }
+#env a.print { background-image: url(../images/new/env/print.html); }
+
+#com a.listen { background-image: url(../images/new/com/snd.html); }
+#com a.download { background-image: url(../images/new/com/down.html); }
+#com a.watch { background-image: url(../images/new/com/movie.html); }
+#com a.print { background-image: url(../images/new/com/print.html); }
+
+p.body { padding: 10px; margin: 0 0 .5em 0;}
+
+.advice, .topic { overflow: hidden; height: 1%; margin: 10px 0; padding: 10px ; }
+.advice { border-radius : 6px; -moz-border-radius : 6px; /* Mozilla */ -webkit-border-radius : 6px; /* Webkit */ }
+.advice h3 { margin: 10px 0 5px; font-weight: bold; display: inline; line-height: 1.3em; }
+.advice h3 a { padding-right: 20px; margin-bottom: 10px; }
+.advice h3 a:hover { text-decoration: underline; }
+.advice p { margin: 5px 0; }
+.advice ul {  margin: 0.5em 1em 0 2em ; list-style-type: disc; list-style-position: outside; }
+.advice li, .topic li { padding: .1em 0; }
+.advicepic { float: left; border: 1px solid white; margin: 0 1em 0 0; }
+.topic h3 { margin: 0 0 .5em; font-weight: bold; }
+.topic h4 { font-weight: bold; }
+.topic ul { margin: 0 1em 0 2em ; list-style-type: disc; list-style-position: outside; }
+
+ul.advicelist { margin: 1em 0; }
+.advicelist li { padding: .5em .5em .5em 90px; margin-bottom: .5em; list-style-type: none; border: 2px solid #FBFDFA; min-height: 3.5em;}
+.advicelist h3 { font-weight: bold; display: inline; margin: 0; font-size: 1.1em; line-height: 1.3em; }
+.advicelist a, .advicelist a:visited { padding-right: 20px;}
+.advicelist p { margin: 0; }
+
+/*            _\|/_
+               (o o)
+ +----oOO-{_}-OOo--------------------------------+
+ |												 |
+ |    List of icon styles for all the many and   |
+ |    varied colour combinations contained on    |
+ |    the site!                                  |
+ |                                               |
+ +----------------------------------------------*/
+
+#edu .cms { background: url(../images/new/icons/advicenew/p/9.html) no-repeat 4px 6px; }
+#edu .cmsmedia { background: url(../images/new/icons/misc/p/9.html) no-repeat 4px 6px; }
+#edu .eleaflets { background: url(../images/new/icons/calltoaction/p/9.html) no-repeat 4px 6px; }
+#edu .advicetools { background: url(../images/new/icons/advicetool/p/9.html) no-repeat 4px 6px; }
+#edu .gatewaylink { background: url(../images/new/icons/extlink/p/9.html) no-repeat 4px 6px; }
+#edu .faq { background: url(../images/new/icons/faq/p/9.html) no-repeat 4px 6px; }
+#edu .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+/*The following is only needed for the edu style, as this is the style of the freetext search results*/
+#edu .advicenow_freetext { background: url(../images/new/icons/extlink/p/9.html) no-repeat 4px 6px; }
+#edu .advicenow_freetext h3 a { background: url(../images/new/new_window.html) no-repeat center right; padding-right: 15px; }
+#edu .advicenow_freetext h3 a:hover { background: url(../images/new/new_window.html) no-repeat center right; padding-right: 15px; }
+
+	
+#deb .cms { background: url(../images/new/icons/advicenew/p/11.html) no-repeat 4px 6px; }
+#deb .cmsmedia { background: url(../images/new/icons/misc/p/11.html) no-repeat 4px 6px; }
+#deb .eleaflets { background: url(../images/new/icons/calltoaction/p/11.html) no-repeat 4px 6px; }
+#deb .advicetools { background: url(../images/new/icons/advicetool/p/11.html) no-repeat 4px 6px; }
+#deb .gatewaylink { background: url(../images/new/icons/extlink/p/11.html) no-repeat 4px 6px; }
+#deb .faq { background: url(../images/new/icons/faq/p/11.html) no-repeat 4px 6px; }
+#deb .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#ben .cms { background: url(../images/new/icons/advicenew/p/12.html) no-repeat 4px 6px; }
+#ben .cmsmedia { background: url(../images/new/icons/misc/p/12.html) no-repeat 4px 6px; }
+#ben .eleaflets { background: url(../images/new/icons/calltoaction/p/12.html) no-repeat 4px 6px; }
+#ben .advicetools { background: url(../images/new/icons/advicetool/p/12.html) no-repeat 4px 6px; }
+#ben .gatewaylink { background: url(../images/new/icons/extlink/p/12.html) no-repeat 4px 6px; }
+#ben .faq { background: url(../images/new/icons/faq/p/12.html) no-repeat 4px 6px; }
+#ben .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#hou .cms { background: url(../images/new/icons/advicenew/p/13.html) no-repeat 4px 6px; }
+#hou .cmsmedia { background: url(../images/new/icons/misc/p/13.html) no-repeat 4px 6px; }
+#hou .eleaflets { background: url(../images/new/icons/calltoaction/p/13.html) no-repeat 4px 6px; }
+#hou .advicetools { background: url(../images/new/icons/advicetool/p/13.html) no-repeat 4px 6px; }
+#hou .gatewaylink { background: url(../images/new/icons/extlink/p/13.html) no-repeat 4px 6px; }
+#hou .faq { background: url(../images/new/icons/faq/p/13.html) no-repeat 4px 6px; }
+#hou .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#emp .cms { background: url(../images/new/icons/advicenew/p/14.html) no-repeat 4px 6px; }
+#emp .cmsmedia { background: url(../images/new/icons/misc/p/14.html) no-repeat 4px 6px; }
+#emp .eleaflets { background: url(../images/new/icons/calltoaction/p/14.html) no-repeat 4px 6px; }
+#emp .advicetools { background: url(../images/new/icons/advicetool/p/14.html) no-repeat 4px 6px; }
+#emp .gatewaylink { background: url(../images/new/icons/extlink/p/14.html) no-repeat 4px 6px; }
+#emp .faq { background: url(../images/new/icons/faq/p/14.html) no-repeat 4px 6px; }
+#emp .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#fam .cms { background: url(../images/new/icons/advicenew/p/7.html) no-repeat 4px 6px; }
+#fam .cmsmedia { background: url(../images/new/icons/misc/p/7.html) no-repeat 4px 6px; }
+#fam .eleaflets { background: url(../images/new/icons/calltoaction/p/7.html) no-repeat 4px 6px; }
+#fam .advicetools { background: url(../images/new/icons/advicetool/p/7.html) no-repeat 4px 6px; }
+#fam .gatewaylink { background: url(../images/new/icons/extlink/p/7.html) no-repeat 4px 6px; }
+#fam .faq { background: url(../images/new/icons/faq/p/7.html) no-repeat 4px 6px; }
+#fam .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#gov .cms { background: url(../images/new/icons/advicenew/p/1.html) no-repeat 4px 6px; }
+#gov .cmsmedia { background: url(../images/new/icons/misc/p/1.html) no-repeat 4px 6px; }
+#gov .eleaflets { background: url(../images/new/icons/calltoaction/p/1.html) no-repeat 4px 6px; }
+#gov .advicetools { background: url(../images/new/icons/advicetool/p/1.html) no-repeat 4px 6px; }
+#gov .gatewaylink { background: url(../images/new/icons/extlink/p/1.html) no-repeat 4px 6px; }
+#gov .faq { background: url(../images/new/icons/faq/p/1.html) no-repeat 4px 6px; }
+#gov .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#imm .cms { background: url(../images/new/icons/advicenew/p/6.html) no-repeat 4px 6px; }
+#imm .cmsmedia { background: url(../images/new/icons/misc/p/6.html) no-repeat 4px 6px; }
+#imm .eleaflets { background: url(../images/new/icons/calltoaction/p/6.html) no-repeat 4px 6px; }
+#imm .advicetools { background: url(../images/new/icons/advicetool/p/6.html) no-repeat 4px 6px; }
+#imm .gatewaylink { background: url(../images/new/icons/extlink/p/6.html) no-repeat 4px 6px; }
+#imm .faq { background: url(../images/new/icons/faq/p/6.html) no-repeat 4px 6px; }
+#imm .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#hea .cms { background: url(../images/new/icons/advicenew/p/8.html) no-repeat 4px 6px; }
+#hea .cmsmedia { background: url(../images/new/icons/misc/p/8.html) no-repeat 4px 6px; }
+#hea .eleaflets { background: url(../images/new/icons/calltoaction/p/8.html) no-repeat 4px 6px; }
+#hea .advicetools { background: url(../images/new/icons/advicetool/p/8.html) no-repeat 4px 6px; }
+#hea .gatewaylink { background: url(../images/new/icons/extlink/p/8.html) no-repeat 4px 6px; }
+#hea .faq { background: url(../images/new/icons/faq/p/8.html) no-repeat 4px 6px; }
+#hea .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#pol .cms { background: url(../images/new/icons/advicenew/p/5.html) no-repeat 4px 6px; }
+#pol .cmsmedia { background: url(../images/new/icons/misc/p/5.html) no-repeat 4px 6px; }
+#pol .eleaflets { background: url(../images/new/icons/calltoaction/p/5.html) no-repeat 4px 6px; }
+#pol .advicetools { background: url(../images/new/icons/advicetool/p/5.html) no-repeat 4px 6px; }
+#pol .gatewaylink { background: url(../images/new/icons/extlink/p/5.html) no-repeat 4px 6px; }
+#pol .faq { background: url(../images/new/icons/faq/p/5.html) no-repeat 4px 6px; }
+#pol .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#cons .cms { background: url(../images/new/icons/advicenew/p/2.html) no-repeat 4px 6px; }
+#cons .cmsmedia { background: url(../images/new/icons/misc/p/2.html) no-repeat 4px 6px; }
+#cons .eleaflets { background: url(../images/new/icons/calltoaction/p/2.html) no-repeat 4px 6px; }
+#cons .advicetools { background: url(../images/new/icons/advicetool/p/2.html) no-repeat 4px 6px; }
+#cons .gatewaylink { background: url(../images/new/icons/extlink/p/2.html) no-repeat 4px 6px; }
+#cons .faq { background: url(../images/new/icons/faq/p/2.html) no-repeat 4px 6px; }
+#cons .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#tra .cms { background: url(../images/new/icons/advicenew/p/6.html) no-repeat 4px 6px; }
+#tra .cmsmedia { background: url(../images/new/icons/misc/p/6.html) no-repeat 4px 6px; }
+#tra .eleaflets { background: url(../images/new/icons/calltoaction/p/6.html) no-repeat 4px 6px; }
+#tra .advicetools { background: url(../images/new/icons/advicetool/p/6.html) no-repeat 4px 6px; }
+#tra .gatewaylink { background: url(../images/new/icons/extlink/p/6.html) no-repeat 4px 6px; }
+#tra .faq { background: url(../images/new/icons/faq/p/6.html) no-repeat 4px 6px; }
+#tra .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#env .cms { background: url(../images/new/icons/advicenew/p/10.html) no-repeat 4px 6px; }
+#env .cmsmedia { background: url(../images/new/icons/misc/p/10.html) no-repeat 4px 6px; }
+#env .eleaflets { background: url(../images/new/icons/calltoaction/p/10.html) no-repeat 4px 6px; }
+#env .advicetools { background: url(../images/new/icons/advicetool/p/10.html) no-repeat 4px 6px; }
+#env .gatewaylink { background: url(../images/new/icons/extlink/p/10.html) no-repeat 4px 6px; }
+#env .faq { background: url(../images/new/icons/faq/p/10.html) no-repeat 4px 6px; }
+#env .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+#com .cms { background: url(../images/new/icons/advicenew/p/12.html) no-repeat 4px 6px; }
+#com .cmsmedia { background: url(../images/new/icons/misc/p/12.html) no-repeat 4px 6px; }
+#com .eleaflets { background: url(../images/new/icons/calltoaction/p/12.html) no-repeat 4px 6px; }
+#com .advicetools { background: url(../images/new/icons/advicetool/p/12.html) no-repeat 4px 6px; }
+#com .gatewaylink { background: url(../images/new/icons/extlink/p/12.html) no-repeat 4px 6px; }
+#com .faq { background: url(../images/new/icons/faq/p/12.html) no-repeat 4px 6px; }
+#com .clacs { background: url(../images/new/icons/clacs/p/9.html) no-repeat 4px 6px; }
+
+.otheradvice { list-style: none; margin: 0; padding: 0; border: 0; margin-bottom: 15px;}
+.otheradvice li { border-bottom: 1px solid #fff; padding: .5em .5em .5em 90px; margin: 0; }
+.otheradvice h3 { display: inline; margin: 0; font-size: 1.1em; }
+.otheradvice h3 a { color: #013948; font-weight: bold; }
+.otheradvice h3 a:hover { text-decoration: underline; background: none; }
+.otheradvice h3 img { width: 10px; height: 10px; align: middle; margin-left: 5px; }
+.otheradvice p { margin: 0; }
+.otheradvice a.source { font-size: .9em; font-weight: bold; padding-right: 20px; }
+.from { font-weight: bold; }
+
+
+/* # Default # */
+.sec { background: url(../images/new/gov/wide_bottom.html) no-repeat bottom left #dceec5; }
+.sec h1, .sec h2, .sec h3 { background: url(../images/new/gov/wide_top.html) no-repeat top left #d4eab8; }
+.sec h1.widet, .sec h2.widet, .sec h3.widet { background-image: url(../images/new/gov/wider_top.html); }
+.wider { background: url(../images/new/gov/wider_bottom.html) bottom left #dceec5; }
+h1, h2, h3 { color: #213701; }
+.secb { background: url(../images/new/gov/banner.html) no-repeat bottom left #dceec5; }
+.secbf { background: #dceec5; }
+.secbf p { margin: .3em 0; }
+.sectionbox h4 { background: url(../images/new/gov/narrow_top.html) no-repeat top left; }
+.sectionbox ul { background: url(../images/new/gov/narrow_bottom.html) no-repeat bottom left #dceec5; }
+.sectionbox a { background: url(../images/new/gov/bullet_light.html) no-repeat 4px .25em; }
+.sectionbox a:hover, .sectionbox a:active, .sectionbox a:focus { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat 4px .25em; color: #000; }
+.sectionbox li.on a { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat 4px .25em; }
+.sectionbox li.on  { background: #c5e29f; }
+.options { background: #dceec5; }
+.options li a { line-height: 1.2em; background: url(../images/new/gov/bullet_light.html) no-repeat 0px .25em; }
+.options li a:hover, .options li a:active, .options li a:focus { background: url(../images/new/gov/bullet_dark.html) no-repeat 0px .25em; color: #000; }
+.advice:hover { background: #dceec5; }
+.advice h3 a { background: url(../images/new/gov/bullet_light.html) no-repeat center right; color: #213701; }
+.advice h3 a:hover { background: url(../images/new/gov/bullet_dark.html) no-repeat center right; }
+.advicelist li:hover { border: 2px solid #dceec5; }
+.advicelist a { color: #213701; background: url(../images/new/gov/bullet_light.html) no-repeat center right; }
+.advicelist a:hover { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat center right; }
+.next{ background: url(../images/new/gov/bullet_light.html) no-repeat center right; }
+p.body { background: #dceec5; }
+.otheradvice a.source   { background: url(../images/new/gov/bullet_light.html) no-repeat center right; }
+.otheradvice a.source:hover { background: url(../images/new/gov/bullet_dark.html) no-repeat center right; text-decoration: underline; }
+.otheradvice { background: url(../images/new/gov/wide_top1.html) no-repeat top left #ecf6df; }
+.otheradvice li.last { background: url(../images/new/gov/wide_bottom1.html) no-repeat bottom left; }
+.links a { background: url(../images/new/gov/bullet_light.html) no-repeat 0px .25em; }
+.links a:hover { background: url(../images/new/govbullet_dark.html) no-repeat 0px .25em; }
+.links li.upleaflet a { background: url(../images/new/gov/left_bullet_light.html) no-repeat 0px .25em; }
+.links li.upleaflet a:hover { background: url(../images/new/gov/left_bullet_dark.html) no-repeat 0px .25em; }
+
+/* # Education # */
+#edu .sec { background: url(../images/new/edu/wide_bottom.html) no-repeat bottom left #beeaf5 ; }
+#edu .sec h1, #edu .sec h2, #edu .sec h3 { background: url(../images/new/edu/wide_top.html) no-repeat top left #9bdef2; }
+#edu h1, #edu h2, #edu h3 { color: #013544; }
+#edu .secb { background: url(../images/new/edu/banner.html) no-repeat bottom left #BEEAF5; }
+#edu .secbf { background: #beeaf5; }
+#edu .sectionbox h4 { background: url(../images/new/edu/narrow_top.html) no-repeat top left; }
+#edu .sectionbox ul { background: url(../images/new/edu/narrow_bottom.html) no-repeat bottom left #B0E5F5; }
+#edu .sectionbox a { background: url(../images/new/edu/bullet_light.html) no-repeat 4px .25em; }
+#edu .sectionbox a:hover, #edu .sectionbox a:active, #edu .sectionbox a:focus { text-decoration: underline; background: url(../images/new/edu/bullet_dark.html) no-repeat 4px .25em; color: #000; }
+#edu .sectionbox li.on a { text-decoration: underline; background: url(../images/new/edu/bullet_dark.html) no-repeat 4px .25em; }
+#edu .sectionbox li.on  { background: #e0f4fb; }
+#edu .options, #edu .contents { background: #beeaf5; }
+#edu .options li a { background: url(../images/new/edu/bullet_light.html) no-repeat .25em .25em; }
+#edu .options li a:hover, #edu .options li a:active, #edu .options li a:focus { background: url(../images/new/edu/bullet_dark.html) no-repeat .25em .25em; text-decoration: underline; color: #000; }
+#edu .advice:hover { background: #B0E5F5; }
+#edu .advice h3 a { background: url(../images/new/edu/bullet_light.html) no-repeat center right; color: #013544; }
+#edu .advice h3 a:hover { background: url(../images/new/edu/bullet_dark.html) no-repeat center right; }
+#edu .advicelist li:hover { border: 2px solid #B0E5F5; }
+#edu .advicelist a { color: #013544; background: url(../images/new/edu/bullet_light.html) no-repeat center right; }
+#edu .advicelist a:hover { text-decoration: underline; background: url(../images/new/edu/bullet_dark.html) no-repeat center right; }
+#edu .next{ background: url(../images/new/edu/bullet_light.html) no-repeat center right; }
+#edu p.body { background: #b2ebf7; }
+#edu .otheradvice a.source  { background: url(../images/new/edu/bullet_light.html) no-repeat center right; }
+#edu .otheradvice a.source:hover { background: url(../images/new/edu/bullet_dark.html) no-repeat center right; text-decoration: underline; }
+#edu .otheradvice { background: url(../images/new/edu/wide_top1.html) no-repeat top left #daf3f9; }
+#edu .otheradvice li { background: url(../images/new/icons/extlink/p/9.html) no-repeat 2em center; }
+#edu .otheradvice li.last { background: url(../images/new/edu/wide_bottom1.html) no-repeat bottom left; }
+#edu .contents a { background: url(../images/new/edu/bullet_light.html) no-repeat 0px 2px; }
+#edu .contents a:hover { background: url(../images/new/edu/bullet_dark.html) no-repeat 0px 2px; }
+#edu .links a { background: url(../images/new/edu/bullet_light.html) no-repeat 0px .25em; }
+#edu .links a:hover { background: url(../images/new/edu/bullet_dark.html) no-repeat 0px .25em; }
+#edu .links li.upleaflet a { background: url(../images/new/edu/left_bullet_light.html) no-repeat 0px .25em; }
+#edu .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Debt # */
+#deb .sec { background: url(../images/new/deb/wide_bottom.gif) no-repeat bottom left #ffedbd; }
+#deb .sec h1, #deb .sec h2, #deb .sec h3 { background: url(../images/new/deb/wide_top.gif) no-repeat top left #ffe9ae; }
+#deb h1, #deb h2, #deb h3 { color: #453200; }
+#deb .secb { background: url(../images/new/deb/banner.gif) no-repeat bottom left #ffedbd; }
+#deb .secbf { background: #ffedbd; }
+#deb .sectionbox h4 { background: url(../images/new/deb/narrow_top.gif) no-repeat top left; }
+#deb .sectionbox ul { background: url(../images/new/deb/narrow_bottom.gif) no-repeat bottom left #ffedbd; }
+#deb .sectionbox a { background: url(../images/new/deb/bullet_light.gif) no-repeat 4px .25em; }
+#deb .sectionbox a:hover, #deb .sectionbox a:active, #deb .sectionbox a:focus { text-decoration: underline; background: url(../images/new/deb/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#deb .sectionbox li.on a { text-decoration: underline; background: url(../images/new/deb/bullet_dark.gif) no-repeat 4px .25em; }
+#deb .sectionbox li.on  { background: #ffe191; }
+#deb .options { background: #ffedbd; }
+#deb .options li a { background: url(../images/new/deb/bullet_light.gif) no-repeat .25em .25em; }
+#deb .options li a:hover, #deb .options li a:active, #deb .options li a:focus  { background: url(../images/new/deb/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#deb .advice:hover { background: #ffedbd; }
+#deb .advice h3 a { background: url(../images/new/deb/bullet_light.gif) no-repeat center right; color: #453200; }
+#deb .advice h3 a:hover { background: url(../images/new/deb/bullet_dark.gif) no-repeat center right; }
+#deb .advicelist li:hover { border: 2px solid #ffedbd; }
+#deb .advicelist a { color: #453200; background: url(../images/new/deb/bullet_light.gif) no-repeat center right; }
+#deb .advicelist a:hover { text-decoration: underline; background: url(../images/new/deb/bullet_dark.gif) no-repeat center right; }
+#deb .next{ background: url(../images/new/deb/bullet_light.gif) no-repeat center right; }
+#deb p.body { background: #ffedbd; }
+#deb .otheradvice a.source  { background: url(../images/new/deb/bullet_light.gif) no-repeat center right; }
+#deb .otheradvice a.source:hover { background: url(../images/new/deb/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#deb .otheradvice { background: url(../images/new/deb/wide_top1.gif) no-repeat top left #fff5d9; }
+#deb .otheradvice li { background: url(../images/new/icons/extlink/p/11.html) no-repeat 2em center; }
+#deb .otheradvice li.last { background: url(../images/new/deb/wide_bottom1.gif) no-repeat bottom left; }
+#deb .contents a { background: url(../images/new/deb/bullet_light.gif) no-repeat 0px 2px; }
+#deb .contents a:hover { background: url(../images/new/deb/bullet_dark.gif) no-repeat 0px 2px; }
+#deb .links a { background: url(../images/new/deb/bullet_light.gif) no-repeat 0px .25em; }
+#deb .links a:hover { background: url(../images/new/deb/bullet_dark.gif) no-repeat 0px .25em; }
+#deb .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#deb .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Benefits # */
+#ben .sec { background: url(../images/new/ben/wide_bottom.gif) no-repeat bottom left #e8dded ; }
+#ben .sec h1, #ben .sec h2, #ben .sec h3 { background: url(../images/new/ben/wide_top.gif) no-repeat top left #e3d5e9; }
+#ben .sec h1, #ben h2, #ben h3 { color: #2a0146; }
+#ben .secb { background: url(../images/new/ben/banner.gif) no-repeat bottom left #e8dded; }
+#ben .secbf { background: #e8dded; }
+#ben .sectionbox h4 { background: url(../images/new/ben/narrow_top.gif) no-repeat top left; }
+#ben .sectionbox ul { background: url(../images/new/ben/narrow_bottom.gif) no-repeat bottom left #e8dded; }
+#ben .sectionbox a { background: url(../images/new/ben/bullet_light.gif) no-repeat 4px .25em; }
+#ben .sectionbox a:hover, #ben .sectionbox a:active, #ben .sectionbox a:focus { text-decoration: underline; background: url(../images/new/ben/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#ben .sectionbox li.on a { text-decoration: underline; background: url(../images/new/ben/bullet_dark.gif) no-repeat 4px .25em; }
+#ben .sectionbox li.on  { background: #d8c7e0; }
+#ben .options { background: #e8dded; }
+#ben .options li a { background: url(../images/new/ben/bullet_light.gif) no-repeat .25em .25em; }
+#ben .options li a:hover, #ben .options li a:active, #ben .options li a:focus  { background: url(../images/new/ben/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#ben .advice:hover { background: #e8dded; }
+#ben .advice h3 a { background: url(../images/new/ben/bullet_light.gif) no-repeat center right; color: #2a0146; }
+#ben .advice h3 a:hover { background: url(../images/new/ben/bullet_dark.gif) no-repeat center right; }
+#ben .advicelist li:hover { border: 2px solid #e8dded; }
+#ben .advicelist a { color: #2a0146; background: url(../images/new/ben/bullet_light.gif) no-repeat center right; }
+#ben .advicelist a:hover { text-decoration: underline; background: url(../images/new/ben/bullet_dark.gif) no-repeat center right; }
+#ben .next{ background: url(../images/new/ben/bullet_light.gif) no-repeat center right; }
+#ben p.body { background: #e8dded; }
+#ben .otheradvice a.source   { background: url(../images/new/ben/bullet_light.gif) no-repeat center right; }
+#ben .otheradvice a.source:hover { background: url(../images/new/ben/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#ben .otheradvice { background: url(../images/new/ben/wide_top1.gif) no-repeat top left #f2ecf5; }
+#ben .otheradvice li { background: url(../images/new/icons/extlink/p/12.html) no-repeat 2em center; }
+#ben .otheradvice li.last { background: url(../images/new/ben/wide_bottom1.gif) no-repeat bottom left; }
+#ben .contents a { background: url(../images/new/ben/bullet_light.gif) no-repeat 0px 2px; }
+#ben .contents a:hover { background: url(../images/new/ben/bullet_dark.gif) no-repeat 0px 2px; }
+#ben .links a { background: url(../images/new/ben/bullet_light.gif) no-repeat 0px .25em; }
+#ben .links a:hover { background: url(../images/new/ben/bullet_dark.gif) no-repeat 0px .25em; }
+#ben .links li.upleaflet a { background: url(../images/new/ben/left_bullet_light.html) no-repeat 0px .25em; }
+#ben .links li.upleaflet a:hover { background: url(../images/new/ben/left_bullet_dark.html) no-repeat 0px .25em; }
+
+/* # Housing # */
+#hou .sec { background: url(../images/new/hou/wide_bottom.gif) no-repeat bottom left #fbd4e6; }
+#hou .sec h1, #hou .sec h2, #hou .sec h3 { background: url(../images/new/hou/wide_top.gif) no-repeat top left #facae0; }
+#hou h1, #hou h2, #hou h3 { color: #300013; }
+#hou .secb { background: url(../images/new/hou/banner.gif) no-repeat bottom left #fbd4e6; }
+#hou .secbf { background: #fbd4e6; }
+#hou .sectionbox h4 { background: url(../images/new/hou/narrow_top.gif) no-repeat top left; }
+#hou .sectionbox ul { background: url(../images/new/hou/narrow_bottom.gif) no-repeat bottom left #fbd4e6; }
+#hou .sectionbox a { background: url(../images/new/hou/bullet_light.gif) no-repeat 4px .25em; }
+#hou .sectionbox a:hover, #hou .sectionbox a:active, #hou .sectionbox a:focus { text-decoration: underline; background: url(../images/new/hou/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#hou .sectionbox li.on a { text-decoration: underline; background: url(../images/new/hou/bullet_dark.gif) no-repeat 4px .25em; }
+#hou .sectionbox li.on  { background: #f8b8d5; }
+#hou .options , #hou .contents{ background: #fbd4e6; }
+#hou .options li a { background: url(../images/new/hou/bullet_light.gif) no-repeat .25em .25em; }
+#hou .options li a:hover, #hou .options li a:active, #hou .options li a:focus  { background: url(../images/new/hou/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#hou .advice:hover { background: #fbd4e6; }
+#hou .advice h3 a { background: url(../images/new/hou/bullet_light.gif) no-repeat center right; color: #300013; }
+#hou .advice h3 a:hover { background: url(../images/new/hou/bullet_dark.gif) no-repeat center right; }
+#hou .advicelist li:hover { border: 2px solid #fbd4e6; }
+#hou .advicelist a { color: #300013; background: url(../images/new/hou/bullet_light.gif) no-repeat center right; }
+#hou .advicelist a:hover { text-decoration: underline; background: url(../images/new/hou/bullet_dark.gif) no-repeat center right; }
+#hou .next{ background: url(../images/new/hou/bullet_light.gif) no-repeat center right; }
+#hou p.body { background: #fbd4e6; }
+#hou .otheradvice a.source   { background: url(../images/new/hou/bullet_light.gif) no-repeat center right; }
+#hou .otheradvice a.source:hover { background: url(../images/new/hou/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#hou .otheradvice { background: url(../images/new/hou/wide_top1.gif) no-repeat top left #fde7f1; }
+#hou .otheradvice li { background: url(../images/new/icons/extlink/p/13.html) no-repeat 2em center; }
+#hou .otheradvice li.last { background: url(../images/new/hou/wide_bottom1.gif) no-repeat bottom left; }
+#hou .contents a { background: url(../images/new/hou/bullet_light.gif) no-repeat 0px 2px; }
+#hou .contents a:hover { background: url(../images/new/hou/bullet_dark.gif) no-repeat 0px 2px; }
+#hou .links a { background: url(../images/new/hou/bullet_light.gif) no-repeat 0px .25em; }
+#hou .links a:hover { background: url(../images/new/hou/bullet_dark.gif) no-repeat 0px .25em; }
+#hou .links li.upleaflet a { background: url(../images/new/hou/left_bullet_light.gif) no-repeat 0px .25em; }
+#hou .links li.upleaflet a:hover { background: url(../images/new/hou/left_bullet_dark.gif) no-repeat 0px .25em; }
+
+/* # Employment # */
+#emp .sec { background: url(../images/new/emp/wide_bottom.gif) no-repeat bottom left #baebea ; }
+#emp .sec h1, #emp .sec h2, #emp .sec h3 { background: url(../images/new/emp/wide_top.gif) no-repeat top left #aae6e5; }
+#emp h1, #emp h2, #emp h3 { color: #002e2e; }
+#emp .secb { background: url(../images/new/emp/banner.gif) no-repeat bottom left #baebea; }
+#emp .secbf { background: #baebea; }
+#emp .sectionbox h4 { background: url(../images/new/emp/narrow_top.gif) no-repeat top left; }
+#emp .sectionbox ul { background: url(../images/new/emp/narrow_bottom.gif) no-repeat bottom left #baebea; }
+#emp .sectionbox a { background: url(../images/new/emp/bullet_light.gif) no-repeat 4px .25em; }
+#emp .sectionbox a:hover, #emp .sectionbox a:active, #emp .sectionbox a:focus { text-decoration: underline; background: url(../images/new/emp/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#emp .sectionbox li.on a { text-decoration: underline; background: url(../images/new/emp/bullet_dark.gif) no-repeat 4px .25em; }
+#emp .sectionbox li.on  { background: #8cdddc; }
+#emp .options { background: #baebea; }
+#emp .options li a { background: url(../images/new/emp/bullet_light.gif) no-repeat .25em .25em; }
+#emp .options li a:hover, #emp .options li a:active, #emp .options li a:focus  { background: url(../images/new/emp/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#emp .advice:hover { background: #baebea; }
+#emp .advice h3 a { background: url(../images/new/emp/bullet_light.gif) no-repeat center right; color: #002e2e; }
+#emp .advice h3 a:hover { background: url(../images/new/emp/bullet_dark.gif) no-repeat center right; }
+#emp .advicelist li:hover { border: 2px solid #baebea; }
+#emp .advicelist a { color: #002e2e; background: url(../images/new/emp/bullet_light.gif) no-repeat center right; }
+#emp .advicelist a:hover { text-decoration: underline; background: url(../images/new/emp/bullet_dark.gif) no-repeat center right; }
+#emp .next{ background: url(../images/new/emp/bullet_light.gif) no-repeat center right; }
+#emp p.body { background: #baebea; }
+#emp .otheradvice a.source   { background: url(../images/new/emp/bullet_light.gif) no-repeat center right; }
+#emp .otheradvice a.source:hover { background: url(../images/new/emp/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#emp .otheradvice { background: url(../images/new/emp/wide_top1.gif) no-repeat top left #d9f4f3; }
+#emp .otheradvice li.last { background: url(../images/new/emp/wide_bottom1.gif) no-repeat bottom left; }
+#emp .otheradvice li { background: url(../images/new/icons/extlink/p/14.html) no-repeat 2em center; }
+#emp .contents a { background: url(../images/new/emp/bullet_light.gif) no-repeat 0px 2px; }
+#emp .contents a:hover { background: url(../images/new/emp/bullet_dark.gif) no-repeat 0px 2px; }
+#emp .links a { background: url(../images/new/emp/bullet_light.gif) no-repeat 0px .25em; }
+#emp .links a:hover { background: url(../images/new/emp/bullet_dark.gif) no-repeat 0px .25em; }
+#emp .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#emp .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Family # */
+#fam .sec { background: url(../images/new/fam/wide_bottom.gif) no-repeat bottom left #fde3ce; }
+#fam .sec h1, #fam .sec h2, #fam .sec h3 { background: url(../images/new/fam/wide_top.gif) no-repeat top left #fcddc3; }
+#fam h1, #fam h2, #fam h3 { color: #351800; }
+#fam .secb { background: url(../images/new/fam/banner.gif) no-repeat bottom left #fde3ce; }
+#fam .secbf { background: #fde3ce; }
+#fam .sectionbox h4 { background: url(../images/new/fam/narrow_top.gif) no-repeat top left; }
+#fam .sectionbox ul { background: url(../images/new/fam/narrow_bottom.gif) no-repeat bottom left #fde3ce; }
+#fam .sectionbox a { background: url(../images/new/fam/bullet_light.gif) no-repeat 4px .25em; }
+#fam .sectionbox a:hover, #fam .sectionbox a:active, #fam .sectionbox a:focus { text-decoration: underline; background: url(../images/new/fam/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#fam .sectionbox li.on a { text-decoration: underline; background: url(../images/new/fam/bullet_dark.gif) no-repeat 4px .25em; }
+#fam .sectionbox li.on  { background: #fcd0ae; }
+#fam .options { background: #fde3ce; }
+#fam .options li a { background: url(../images/new/fam/bullet_light.gif) no-repeat .25em .25em; }
+#fam .options li a:hover, #fam .options li a:active, #fam .options li a:focus  { background: url(../images/new/fam/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#fam .advice:hover { background: #fde3ce; }
+#fam .advice h3 a { background: url(../images/new/fam/bullet_light.gif) no-repeat center right; color: #351800; }
+#fam .advice h3 a:hover { background: url(../images/new/fam/bullet_dark.gif) no-repeat center right; }
+#fam .advicelist li:hover { border: 2px solid #fde3ce; }
+#fam .advicelist a { color: #351800; background: url(../images/new/fam/bullet_light.gif) no-repeat center right; }
+#fam .advicelist a:hover { text-decoration: underline; background: url(../images/new/fam/bullet_dark.gif) no-repeat center right; }
+#fam .next{ background: url(../images/new/fam/bullet_light.gif) no-repeat center right; }
+#fam p.body { background: #fde3ce; }
+#fam .otheradvice a.source   { background: url(../images/new/fam/bullet_light.gif) no-repeat center right; }
+#fam .otheradvice a.source:hover { background: url(../images/new/fam/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#fam .otheradvice  { background: url(../images/new/fam/wide_top1.gif) no-repeat top left #fef0e4; }
+#fam .otheradvice li.last { background: url(../images/new/fam/wide_bottom1.gif) no-repeat bottom left; }
+#fam .otheradvice li { background: url(../images/new/icons/extlink/p/7.html) no-repeat 2em center; }
+#fam .contents a { background: url(../images/new/fam/bullet_light.gif) no-repeat 0px 2px; }
+#fam .contents a:hover { background: url(../images/new/fam/bullet_dark.gif) no-repeat 0px 2px; }
+#fam .links a { background: url(../images/new/fam/bullet_light.gif) no-repeat 0px .25em; }
+#fam .links a:hover { background: url(../images/new/fam/bullet_dark.gif) no-repeat 0px .25em; }
+#fam .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#fam .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Government # */
+#gov .sec { background: url(../images/new/gov/wide_bottom.html) no-repeat bottom left #dceec5; }
+#gov .sec h1, #gov .sec h2, #gov .sec h3 { background: url(../images/new/gov/wide_top.html) no-repeat top left #d4eab8; }
+#gov h1, #gov h2, #gov h3 { color: #213701; }
+#gov .secb { background: url(../images/new/gov/banner.html) no-repeat bottom left #dceec5; }
+#gov .secbf { background: #dceec5; }
+#gov .sectionbox h4 { background: url(../images/new/gov/narrow_top.html) no-repeat top left; }
+#gov .sectionbox ul { background: url(../images/new/gov/narrow_bottom.html) no-repeat bottom left #dceec5; }
+#gov .sectionbox a { background: url(../images/new/gov/bullet_light.html) no-repeat 4px .25em; }
+#gov .sectionbox a:hover, #gov .sectionbox a:active, #gov .sectionbox a:focus { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat 4px .25em; color: #000; }
+#gov .sectionbox li.on a { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat 4px .25em; }
+#gov .sectionbox li.on  { background: #c5e29f; }
+#gov .options { background: #dceec5; }
+#gov .options li a { background: url(../images/new/gov/bullet_light.html) no-repeat .25em .25em; }
+#gov .options li a:hover, #gov .options li a:active, #gov .options li a:focus  { background: url(../images/new/gov/bullet_dark.html) no-repeat .25em .25em; color: #000; }
+#gov .advice:hover { background: #dceec5; }
+#gov .advice h3 a { background: url(../images/new/gov/bullet_light.html) no-repeat center right; color: #213701; }
+#gov .advice h3 a:hover { background: url(../images/new/gov/bullet_dark.html) no-repeat center right; }
+#gov .advicelist li:hover { border: 2px solid #dceec5; }
+#gov .advicelist a { color: #213701; background: url(../images/new/gov/bullet_light.html) no-repeat center right; }
+#gov .advicelist a:hover { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat center right; }
+#gov .next{ background: url(../images/new/gov/bullet_light.html) no-repeat center right; }
+#gov p.body { background: #dceec5; }
+#gov .otheradvice a.source   { background: url(../images/new/gov/bullet_light.html) no-repeat center right; }
+#gov .otheradvice a.source:hover { background: url(../images/new/gov/bullet_dark.html) no-repeat center right; text-decoration: underline; }
+#gov .otheradvice { background: url(../images/new/gov/wide_top1.html) no-repeat top left #ecf6df; }
+#gov .otheradvice li.last { background: url(../images/new/gov/wide_bottom1.html) no-repeat bottom left; }
+#gov .otheradvice li { background: url(../images/new/icons/extlink/p/1.html) no-repeat 2em center; }
+#gov .contents a { background: url(../images/new/gov/bullet_light.html) no-repeat 0px 2px; }
+#gov .contents a:hover { background: url(../images/new/gov/bullet_dark.html) no-repeat 0px 2px; }
+#gov .links a { background: url(../images/new/gov/bullet_light.html) no-repeat 0px .25em; }
+#gov .links a:hover { background: url(../images/new/govbullet_dark.html) no-repeat 0px .25em; }
+#gov .links li.upleaflet a { background: url(../images/new/gov/left_bullet_light.html) no-repeat 0px .25em; }
+#gov .links li.upleaflet a:hover { background: url(../images/new/gov/left_bullet_dark.html) no-repeat 0px .25em; }
+
+/* # Immigration & nationality # */
+#imm .sec { background: url(../images/new/imm/wide_bottom.gif) no-repeat bottom left ; }
+#imm .sec h1, #imm .sec h2, #imm .sec h3 { background: url(../images/new/imm/wide_top.gif) no-repeat top left #9ecbe7; }
+#imm h1, #imm h2, #imm h3 { color: #012942; }
+#imm .secb { background: url(../images/new/imm/banner.gif) no-repeat bottom left #cfe6f2; }
+#imm .secbf { background: #cfe6f2; }
+#imm .sectionbox h4 { background: url(../images/new/imm/narrow_top.gif) no-repeat top left; }
+#imm .sectionbox ul { background: url(../images/new/imm/narrow_bottom.gif) no-repeat bottom left #cfe6f2; }
+#imm .sectionbox a { background: url(../images/new/imm/bullet_light.gif) no-repeat 4px .25em; }
+#imm .sectionbox a:hover, #imm .sectionbox a:active, #imm .sectionbox a:focus { text-decoration: underline; background: url(../images/new/imm/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#imm .sectionbox li.on a { text-decoration: underline; background: url(../images/new/imm/bullet_dark.gif) no-repeat 4px .25em; }
+#imm .sectionbox li.on  { background: #7fbbdf; }
+#imm .options, #imm .contents{ background: #cfe6f2; }
+#imm .options li a { background: url(../images/new/imm/bullet_light.gif) no-repeat .25em .25em; }
+#imm .options li a:hover, #imm .options li a:active, #imm .options li a:focus  { background: url(../images/new/imm/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#imm .advice:hover { background: #cfe6f2; }
+#imm .advice h3 a { background: url(../images/new/imm/bullet_light.gif) no-repeat center right; color: #012942; }
+#imm .advice h3 a:hover { background: url(../images/new/imm/bullet_dark.gif) no-repeat center right; }
+#imm .advicelist li:hover { border: 2px solid #b2d6ec; }
+#imm .advicelist a { color: #012942; background: url(../images/new/imm/bullet_light.gif) no-repeat center right; }
+#imm .advicelist a:hover { text-decoration: underline; background: url(../images/new/imm/bullet_dark.gif) no-repeat center right; }
+#imm .next{ background: url(../images/new/imm/bullet_light.gif) no-repeat center right; }
+#imm p.body { background: #cfe6f2; }
+#imm .otheradvice a.source   { background: url(../images/new/imm/bullet_light.gif) no-repeat center right; }
+#imm .otheradvice a.source:hover { background: url(../images/new/imm/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#imm .otheradvice { background: url(../images/new/imm/wide_top1.gif) no-repeat top left #E8F3F7; }
+#imm .otheradvice li.last { background: url(../images/new/imm/wide_bottom1.gif) no-repeat bottom left; }
+#imm .otheradvice li { background: url(../images/new/icons/extlink/p/6.html) no-repeat 2em center; }
+#imm .contents a { background: url(../images/new/imm/bullet_light.gif) no-repeat 0px 2px; }
+#imm .contents a:hover { background: url(../images/new/imm/bullet_dark.gif) no-repeat 0px 2px; }
+#imm .links a { background: url(../images/new/imm/bullet_light.gif) no-repeat 0px .25em; }
+#imm .links a:hover { background: url(../images/new/imm/bullet_dark.gif) no-repeat 0px .25em; }
+#imm .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#imm .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Health & social care # */
+#hea .sec { background: url(../images/new/hea/wide_bottom.gif) #e4f0b2 no-repeat bottom left ; }
+#hea .sec h3, #hea .sec h2, #hea .sec h3 { background: url(../images/new/hea/wide_top.gif) no-repeat top left #d2e57f; }
+#hea h1, #hea h2, #hea h3 { color: #252e00; }
+#hea .secb { background: url(../images/new/hea/banner.gif) no-repeat bottom left #e4f0b2; }
+#hea .secbf { background: #e4f0b2; }
+#hea .sectionbox h4 { background: url(../images/new/hea/narrow_top.gif) no-repeat top left; }
+#hea .sectionbox ul { background: url(../images/new/hea/narrow_bottom.gif) no-repeat bottom left #edf5cf; }
+#hea .sectionbox a { background: url(../images/new/hea/bullet_light.gif) no-repeat 4px .25em; }
+#hea .sectionbox a:hover, #hea .sectionbox a:active, #hea .sectionbox a:focus { text-decoration: underline; background: url(../images/new/hea/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#hea .sectionbox li.on a { text-decoration: underline; background: url(../images/new/hea/bullet_dark.gif) no-repeat 4px .25em; }
+#hea .sectionbox li.on  { background: #d2e57f; }
+#hea .options, #hea .contents{ background: #e4f0b2; }
+#hea .options li a { background: url(../images/new/hea/bullet_light.gif) no-repeat .25em .25em; }
+#hea .options li a:hover, #hea .options li a:active, #hea .options li a:focus  { background: url(../images/new/hea/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#hea .advice:hover { background: #edf5cf; }
+#hea .advice h3 a { background: url(../images/new/hea/bullet_light.gif) no-repeat center right; color: #252e00; }
+#hea .advice h3 a:hover { background: url(../images/new/hea/bullet_dark.gif) no-repeat center right; }
+#hea .advicelist li:hover { border: 2px solid #edf5cf; }
+#hea .advicelist a { color: #252e00; background: url(../images/new/hea/bullet_light.gif) no-repeat center right; }
+#hea .advicelist a:hover { text-decoration: underline; background: url(../images/new/hea/bullet_dark.gif) no-repeat center right; }
+#hea .next{ background: url(../images/new/hea/bullet_light.gif) no-repeat center right; }
+#hea p.body { background: #e4f0b2; }
+#hea .otheradvice a.source   { background: url(../images/new/hea/bullet_light.gif) no-repeat center right; }
+#hea .otheradvice a.source:hover { background: url(../images/new/hea/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#hea .otheradvice { background: url(../images/new/hea/wide_top1.gif) no-repeat top left #F4F9E3; }
+#hea .otheradvice li.last { background: url(../images/new/hea/wide_bottom1.gif) no-repeat bottom left; }
+#hea .otheradvice li { background: url(../images/new/icons/extlink/p/8.html) no-repeat 2em center; }
+#hea .contents a { background: url(../images/new/hea/bullet_light.gif) no-repeat 0px 2px; }
+#hea .contents a:hover { background: url(../images/new/hea/bullet_dark.gif) no-repeat 0px 2px; }
+#hea .links a { background: url(../images/new/hea/bullet_light.gif) no-repeat 0px .25em; }
+#hea .links a:hover { background: url(../images/new/hea/bullet_dark.gif) no-repeat 0px .25em; }
+#hea .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#hea .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Police & crime # */
+#pol .sec { background: url(../images/new/pol/wide_bottom.gif) no-repeat bottom left ; }
+#pol .sec h1, #pol .sec h2, #pol .sec h3 { background: url(../images/new/pol/wide_top.gif) no-repeat top left #f58780; }
+#pol h1, #pol h2, #pol h3 { color: #3f0400; }
+#pol .secb { background: url(../images/new/pol/banner.gif) no-repeat bottom left #fadcd8; }
+#pol .secbf { background: #fadcd8; }
+#pol .sectionbox h4 { background: url(../images/new/pol/narrow_top.gif) no-repeat top left; }
+#pol .sectionbox ul { background: url(../images/new/pol/narrow_bottom.gif) no-repeat bottom left #fadcd8; }
+#pol .sectionbox a { background: url(../images/new/pol/bullet_light.gif) no-repeat 4px .25em; }
+#pol .sectionbox a:hover, #pol .sectionbox a:active, #pol .sectionbox a:focus { text-decoration: underline; background: url(../images/new/pol/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#pol .sectionbox li.on a { text-decoration: underline; background: url(../images/new/pol/bullet_dark.gif) no-repeat 4px .25em; }
+#pol .sectionbox li.on  { background: #f7a09a; }
+#pol .options, #pol .contents{ background: #fadcd8; }
+#pol .options li a { background: url(../images/new/pol/bullet_light.gif) no-repeat .25em .25em; }
+#pol .options li a:hover, #pol .options li a:active, #pol .options li a:focus  { background: url(../images/new/pol/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#pol .advice:hover { background: #fadcd8; }
+#pol .advice h3 a { background: url(../images/new/pol/bullet_light.gif) no-repeat center right; color: #3f0400; }
+#pol .advice h3 a:hover { background: url(../images/new/pol/bullet_dark.gif) no-repeat center right; }
+#pol .advicelist li:hover { border: 2px solid #fadcd8; }
+#pol .advicelist a { color: #3f0400; background: url(../images/new/pol/bullet_light.gif) no-repeat center right; }
+#pol .advicelist a:hover { text-decoration: underline; background: url(../images/new/pol/bullet_dark.gif) no-repeat center right; }
+#pol .next{ background: url(../images/new/pol/bullet_light.gif) no-repeat center right; }
+#pol p.body { background: #fadcd8; }
+#pol .otheradvice a.source   { background: url(../images/new/pol/bullet_light.gif) no-repeat center right; }
+#pol .otheradvice a.source:hover { background: url(../images/new/pol/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#pol .otheradvice { background: url(../images/new/pol/wide_top1.gif) no-repeat top left #FBEBE8; }
+#pol .otheradvice li.last { background: url(../images/new/pol/wide_bottom1.gif) no-repeat bottom left; }
+#pol .otheradvice li { background: url(../images/new/icons/extlink/p/5.html) no-repeat 2em center; }
+#pol .contents a { background: url(../images/new/pol/bullet_light.gif) no-repeat 0px 2px; }
+#pol .contents a:hover { background: url(../images/new/pol/bullet_dark.gif) no-repeat 0px 2px; }
+#pol .links a { background: url(../images/new/pol/bullet_light.gif) no-repeat 0px .25em; }
+#pol .links a:hover { background: url(../images/new/pol/bullet_dark.gif) no-repeat 0px .25em; }
+#pol .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#pol .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Consumer affairs # */
+#cons .sec { background: url(../images/new/cons/wide_bottom.gif) no-repeat bottom left ; }
+#cons .sec h1, #cons .sec h2, #cons .sec h3 { background: url(../images/new/cons/wide_top.gif) no-repeat top left #87979f; }
+#cons h1, #cons h2, #con h3 { color: #001622; }
+#cons .secb { background: url(../images/new/cons/banner.gif) no-repeat bottom left #dbe0e1; }
+#cons .secbf { background: #dbe0e1; }
+#cons .sectionbox h4 { background: url(../images/new/cons/narrow_top.gif) no-repeat top left; }
+#cons .sectionbox ul { background: url(../images/new/cons/narrow_bottom.gif) no-repeat bottom left #dbe0e1; }
+#cons .sectionbox a { background: url(../images/new/cons/bullet_light.gif) no-repeat 4px .25em; }
+#cons .sectionbox a:hover, #cons .sectionbox a:active, #cons .sectionbox a:focus { text-decoration: underline; background: url(../images/new/cons/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#cons .sectionbox li.on a { text-decoration: underline; background: url(../images/new/cons/bullet_dark.gif) no-repeat 4px .25em; }
+#cons .sectionbox li.on  { background: #a0acb3; }
+#cons .options, #con .contents{ background: #dbe0e1; }
+#cons .options li a { background: url(../images/new/cons/bullet_light.gif) no-repeat .25em .25em; }
+#cons .options li a:hover, #cons .options li a:active, #cons .options li a:focus  { background: url(../images/new/cons/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#cons .advice:hover { background: #dbe0e1; }
+#cons .advice h3 a { background: url(../images/new/cons/bullet_light.gif) no-repeat center right; color: #001622; }
+#cons .advice h3 a:hover { background: url(../images/new/cons/bullet_dark.gif) no-repeat center right; }
+#cons .advicelist li:hover { border: 2px solid #dbe0e1; }
+#cons .advicelist a { color: #001622; background: url(../images/new/cons/bullet_light.gif) no-repeat center right; }
+#cons .advicelist a:hover { text-decoration: underline; background: url(../images/new/cons/bullet_dark.gif) no-repeat center right; }
+#cons .next{ background: url(../images/new/cons/bullet_light.gif) no-repeat center right; }
+#cons p.body { background: #dbe0e1; }
+#cons .otheradvice a.source   { background: url(../images/new/cons/bullet_light.gif) no-repeat center right; }
+#cons .otheradvice a.source:hover { background: url(../images/new/cons/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#cons .otheradvice { background: url(../images/new/cons/wide_top1.gif) no-repeat top left #EAEEED; }
+#cons .otheradvice li.last { background: url(../images/new/cons/wide_bottom1.gif) no-repeat bottom left; }
+#cons .otheradvice li { background: url(../images/new/icons/extlink/p/2.html) no-repeat 2em center; }
+#cons .contents a { background: url(../images/new/cons/bullet_light.gif) no-repeat 0px 2px; }
+#cons .contents a:hover { background: url(../images/new/cons/bullet_dark.gif) no-repeat 0px 2px; }
+#cons .links a { background: url(../images/new/cons/bullet_light.gif) no-repeat 0px .25em; }
+#cons .links a:hover { background: url(../images/new/cons/bullet_dark.gif) no-repeat 0px .25em; }
+#cons .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#cons .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Travel, transport & leisure # */
+#tra .sec { background: url(../images/new/tra/wide_bottom.gif) no-repeat bottom left ; }
+#tra .sec h1, #tra .sec h2, #tra .sec h3 { background: url(../images/new/tra/wide_top.gif) no-repeat top left #b9d9f1; }
+#tra h1, #tra h2, #tra h3 { color: #00233e; }
+#tra .secb { background: url(../images/new/tra/banner.gif) no-repeat bottom left #ddedf9; }
+#tra .secbf { background: #ddedf9; }
+#tra .sectionbox h4 { background: url(../images/new/tra/narrow_top.gif) no-repeat top left; }
+#tra .sectionbox ul { background: url(../images/new/tra/narrow_bottom.gif) no-repeat bottom left #ddedf9; }
+#tra .sectionbox a { background: url(../images/new/tra/bullet_light.gif) no-repeat 4px .25em; }
+#tra .sectionbox a:hover, #tra .sectionbox a:active, #tra .sectionbox a:focus { text-decoration: underline; background: url(../images/new/tra/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#tra .sectionbox li.on a { text-decoration: underline; background: url(../images/new/tra/bullet_dark.gif) no-repeat 4px .25em; }
+#tra .sectionbox li.on  { background: #c7e1f4; }
+#tra .options, #tra .contents{ background: #ddedf9; }
+#tra .options li a { background: url(../images/new/tra/bullet_light.gif) no-repeat .25em .25em; }
+#tra .options li a:hover, #tra .options li a:active, #tra .options li a:focus  { background: url(../images/new/tra/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#tra .advice:hover { background: #ddedf9; }
+#tra .advice h3 a { background: url(../images/new/tra/bullet_light.gif) no-repeat center right; color: #00233e; }
+#tra .advice h3 a:hover { background: url(../images/new/tra/bullet_dark.gif) no-repeat center right; }
+#tra .advicelist li:hover { border: 2px solid #ddedf9; }
+#tra .advicelist a { color: #00233e; background: url(../images/new/tra/bullet_light.gif) no-repeat center right; }
+#tra .advicelist a:hover { text-decoration: underline; background: url(../images/new/tra/bullet_dark.gif) no-repeat center right; }
+#tra .next{ background: url(../images/new/tra/bullet_light.gif) no-repeat center right; }
+#tra p.body { background: #ddedf9; }
+#tra .otheradvice a.source   { background: url(../images/new/tra/bullet_light.gif) no-repeat center right; }
+#tra .otheradvice a.source:hover { background: url(../images/new/tra/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#tra .otheradvice { background: url(../images/new/tra/wide_top1.gif) no-repeat top left #EAF4F8; }
+#tra .otheradvice li.last { background: url(../images/new/tra/wide_bottom1.gif) no-repeat bottom left; }
+#tra .otheradvice li { background: url(../images/new/icons/extlink/p/6.html) no-repeat 2em center; }
+#tra .contents a { background: url(../images/new/tra/bullet_light.gif) no-repeat 0px 2px; }
+#tra .contents a:hover { background: url(../images/new/tra/bullet_dark.gif) no-repeat 0px 2px; }
+#tra .links a { background: url(../images/new/tra/bullet_light.gif) no-repeat 0px .25em; }
+#tra .links a:hover { background: url(../images/new/tra/bullet_dark.gif) no-repeat 0px .25em; }
+#tra .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#tra .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Environment & the countryside # */
+#env .sec { background: url(../images/new/env/wide_bottom.gif) no-repeat bottom left; }
+#env .sec h1, #env .sec h2, #env .sec h3 { background: url(../images/new/env/wide_top.gif) no-repeat top left #eda571; }
+#env h1, #env h2, #env h3 { color: #331500; }
+#env .secb { background: url(../images/new/env/banner.gif) no-repeat bottom left #F7D4BB; }
+#env .secbf { background: #F7D4BB; }
+#env .sectionbox h4 { background: url(../images/new/env/narrow_top.gif) no-repeat top left; }
+#env .sectionbox ul { background: url(../images/new/env/narrow_bottom.gif) no-repeat bottom left #fde3ce; }
+#env .sectionbox a { background: url(../images/new/env/bullet_light.gif) no-repeat 4px .25em; }
+#env .sectionbox a:hover, #env .sectionbox a:active, #env .sectionbox a:focus { text-decoration: underline; background: url(../images/new/env/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#env .sectionbox li.on a { text-decoration: underline; background: url(../images/new/env/bullet_dark.gif) no-repeat 4px .25em; }
+#env .sectionbox li.on  { background: #f1b78e; }
+#env .options, #env .contents{ background: #F7D4BB; }
+#env .options li a { background: url(../images/new/env/bullet_light.gif) no-repeat .25em .25em; }
+#env .options li a:hover, #env .options li a:active, #env .options li a:focus  { background: url(../images/new/env/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#env .advice:hover { background: #F7D4BB; }
+#env .advice h3 a { background: url(../images/new/env/bullet_light.gif) no-repeat center right; color: #331500; }
+#env .advice h3 a:hover { background: url(../images/new/env/bullet_dark.gif) no-repeat center right; }
+#env .advicelist li:hover { border: 2px solid #F7D4BB; }
+#env .advicelist a { color: #331500; background: url(../images/new/env/bullet_light.gif) no-repeat center right; }
+#env .advicelist a:hover { text-decoration: underline; background: url(../images/new/env/bullet_dark.gif) no-repeat center right; }
+#env .next{ background: url(../images/new/env/bullet_light.gif) no-repeat center right; }
+#env p.body { background: #F7D4BB; }
+#env .otheradvice a.source   { background: url(../images/new/env/bullet_light.gif) no-repeat center right; }
+#env .otheradvice a.source:hover { background: url(../images/new/env/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#env .otheradvice { background: url(../images/new/env/wide_top1.gif) no-repeat top left #F9F0E6; }
+#env .otheradvice li.last { background: url(../images/new/env/wide_bottom1.gif) no-repeat bottom left; }
+#env .otheradvice li { background: url(../images/new/icons/extlink/p/10.html) no-repeat 2em center; }
+#env .contents a { background: url(../images/new/env/bullet_light.gif) no-repeat 0px 2px; }
+#env .contents a:hover { background: url(../images/new/env/bullet_dark.gif) no-repeat 0px 2px; }
+#env .links a { background: url(../images/new/env/bullet_light.gif) no-repeat 0px .25em; }
+#env .links a:hover { background: url(../images/new/env/bullet_dark.gif) no-repeat 0px .25em; }
+#env .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#env .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+/* # Communications and media # */
+#com .sec { background: url(../images/new/com/wide_bottom.gif) no-repeat bottom left ; }
+#com .sec h1, #com .sec h2, #com .sec h3 { background: url(../images/new/com/wide_top.gif) no-repeat top left #af86be; }
+#com h1, #com h2, #com h3 { color: #300013; }
+#com .secb { background: url(../images/new/com/banner.gif) no-repeat bottom left #d8c5e0; }
+#com .secbf { background: #d8c5e0; }
+#com .sectionbox h4 { background: url(../images/new/com/narrow_top.gif) no-repeat top left; }
+#com .sectionbox ul { background: url(../images/new/com/narrow_bottom.gif) no-repeat bottom left #d8c5e0; }
+#com .sectionbox a { background: url(../images/new/com/bullet_light.gif) no-repeat 4px .25em; }
+#com .sectionbox a:hover, #com .sectionbox a:active, #com .sectionbox a:focus { text-decoration: underline; background: url(../images/new/com/bullet_dark.gif) no-repeat 4px .25em; color: #000; }
+#com .sectionbox li.on a { text-decoration: underline; background: url(../images/new/com/bullet_dark.gif) no-repeat 4px .25em; }
+#com .sectionbox li.on  { background: #bf9fcb; }
+#com .options, #com .contents{ background: #d8c5e0; }
+#com .options li a { background: url(../images/new/com/bullet_light.gif) no-repeat .25em .25em; }
+#com .options li a:hover, #com .options li a:active, #com .options li a:focus  { background: url(../images/new/com/bullet_dark.gif) no-repeat .25em .25em; color: #000; }
+#com .advice:hover { background: #d8c5e0; }
+#com .advice h3 a { background: url(../images/new/com/bullet_light.gif) no-repeat center right; color: #300013; }
+#com .advice h3 a:hover { background: url(../images/new/com/bullet_dark.gif) no-repeat center right; }
+#com .advicelist li:hover { border: 2px solid #d8c5e0; }
+#com .advicelist a { color: #300013; background: url(../images/new/com/bullet_light.gif) no-repeat center right; }
+#com .advicelist a:hover { text-decoration: underline; background: url(../images/new/com/bullet_dark.gif) no-repeat center right; }
+#com .next{ background: url(../images/new/com/bullet_light.gif) no-repeat center right; }
+#com p.body { background: #d8c5e0; }
+#com .otheradvice a.source   { background: url(../images/new/com/bullet_light.gif) no-repeat center right; }
+#com .otheradvice a.source:hover { background: url(../images/new/com/bullet_dark.gif) no-repeat center right; text-decoration: underline; }
+#com .otheradvice { background: url(../images/new/com/wide_top1.gif) no-repeat top left #F0EBF2; }
+#com .otheradvice li.last { background: url(../images/new/com/wide_bottom1.gif) no-repeat bottom left; }
+#com .otheradvice li { background: url(../images/new/icons/extlink/p/12.html) no-repeat 2em center; }
+#com .contents a { background: url(../images/new/com/bullet_light.gif) no-repeat 0px 2px; }
+#com .contents a:hover { background: url(../images/new/com/bullet_dark.gif) no-repeat 0px 2px; }
+#com .links a { background: url(../images/new/com/bullet_light.gif) no-repeat 0px .25em; }
+#com .links a:hover { background: url(../images/new/com/bullet_dark.gif) no-repeat 0px .25em; }
+#com .links li.upleaflet a { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+#com .links li.upleaflet a:hover { background: url(http://webarchive.nationalarchives.gov.uk/20100222112644/http://communitylegaladvice.org.uk/page_unavailable.jsp) no-repeat 0px .25em; }
+
+
+form.callback { float: right; margin: 10px 6px 10px 30px; }
+form.callback input { border: none; width: 164px; height: 64px; font-weight: bold; text-align: right; }
+form.leftform { width: 100%; text-align: center; padding: 10px 0; }
+hr.white { height: 2px; color: #fff; background-color: #fff; width: 88%; border: none; border-top: 1px solid #ccc; text-align: center; }
+
+#breadcrumb { margin: 1em 0; }
+#breadcrumb span { line-height: 1.3em !important; }
+#breadcrumb a:hover {text-decoration: underline;}
+.backtotop { margin: 1em 0 ; display: block; text-align: right; line-height: 1.3em; height: 15px;}
+.backtotop a { background: url(../images/new/backtotop.gif) no-repeat 2px 2px; padding-left: 20px; }
+
+.clear { clear: both; }
+
+form.legal { float: right; width: 40%; margin: 0 15px; padding-top: 10px; }
+form.legal p { font-weight: bold; }
+
+.inputbutton { height: 64px; width: 164px; border: 0; }
+.inputbuttonnav { height: 64px; width: 164px; border: 0; }
+
+#more { text-align: right; }
+#more a { color: #013948; font-weight: bold; }
+#more a.seemore { float: left; padding-right: 20px; background: url(../images/new/blue_bullet_off.gif) no-repeat center right; }
+#more a.advicenow { border-bottom: 1px dashed #666; text-decoration: none;}
+#more a.advicenow:hover { color: #fff; }
+
+.results { margin: 1em 0; overflow: hidden; height: 1%; text-align: right; }
+.results , .results a { color: #013948; font-weight: bold; }
+.resultnumber { float: left; padding: .2em 0em .2em 2em; }
+.resultlink  { padding-right: 2em; float: right; }
+.resultlink ul { display: inline; margin: 0;}
+.resultlink li { display: inline; padding: .2em .4em; }
+.resultlink li.next { font-weight: bold; border-left: 1px solid #013948; padding: .2em 20px .2em .6em;}
+.resultlink li.selected { background: #32660f; color: #fff; }
+
+.resultlink a:hover, .resultlink a:active, .resultlink a:focus{ background: none; }
+
+/* # Hover Popups # */
+a.popup { position: relative; }
+a.popup span { display: none; }
+a.popup:hover, a.popup:visited:hover { float: none; }
+a.popup:hover span{ display: block; position: absolute; top: -130px; left: -40px; width: 200px; margin: 0px; padding: 10px; color: #013948; background: #fff; border: 2px solid #013948; }
+
+.sectionbox li.up a {background: url(../images/new/folder_up.gif) no-repeat 1px center !important; padding-left: 25px;}
+
+div.leftgreenbox h4 { background: url(../images/new/lhp_green_head.gif) no-repeat top left; padding: 5px 10px; margin: 0; border-bottom: 1px solid white; font-weight: bold; margin: 0 0 1em; }
+div.leftgreenbox  { background: url(../images/new/lhp_green_foot.gif) no-repeat bottom left #E9F4E3; margin: 0 0 1em;}
+div.leftgreenbox p { margin: 0 10px; }
+div.leftgreenbox ul { margin: 10px 0 0 25px; list-style-type: disc; list-style-position: outside;}
+div.leftgreenbox ul li { padding: 5px 10px 5px 0; }
+
+/* # About Us # */
+.aboutus { padding: .5em .5em .5em 160px; margin: 1em 0; }
+.aboutus h3 { background: url(../images/new/gov/bullet_light.html) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; }
+.aboutus p , .aboutfloat p { margin: 1em 0 0; }
+.aboutfloat { overflow: hidden; }
+#auhelp { background: url(../media/196/E8/an_communicationsandmedia_4.JPG) no-repeat 0 .5em; }
+#auweb { background: url(../media/196/E7/an_communicationsandmedia_1.JPG) no-repeat 0 .5em; }
+#auadvice { background: url(../media/196/E9/an_consumeraffairs_5.JPG) no-repeat 0 .5em; }
+#audigi { background: url(../media/5BD/DB/Mixed_MG_2292.JPG) no-repeat 0 .5em; }
+.aboutfloat { float: left; width: 50%; min-height: 100px; margin: 1em 0 0; }
+.aboutfloat h3 { margin: 0; font-weight: bold; padding: 0 0 0 100px; }
+.aboutfloat p { padding: 0 0 0 100px; }
+#aucontact { background: url(../images/new/icons/talk.gif) no-repeat 0 0; }
+#augetadvice { background: url(../images/new/icons/advice.gif) no-repeat 0 0; }
+
+/* # Get Advice homepage */
+.gateway, .gatewaytall { height: 61px; margin: .7em 0; padding: 4px .5em 4px 6em; }
+.gateway>*, .gatewaytall>* { margin: 0; }
+.gateway h3, .gatewaytall h3 { font-weight: bold; margin: 0 0 .2em 0; }
+.gateway p, .gatewaytall p { margin: .2em 0; }
+.gateway a, .gateway a:visited, .gatewaytall a, .gatewaytall a:visited { text-decoration: underline; }
+.gatewaytall { height: 192px; }
+
+.gatewaytall a { line-height: 1.5em; }
+
+#seeall { overflow: hidden; }
+#seeall ul{ list-style-type: none; }
+#seeall a { padding: 0 0 0 1.4em; height: 1%; overflow: hidden; }
+#seeall a, #seeall a:visited { background: url(../images/new/gov/bullet_light.html) no-repeat .2em center;  }
+#seeall a:hover { text-decoration: underline; background: url(../images/new/gov/bullet_dark.html) no-repeat .2em center;  }
+
+#seeall a:hover, #seeall a:active, #seeall a:focus{ color: #000; }
+
+#seeall li { width: 23%; float: left; line-height: 8em; padding: 0 0 0 10%; }
+#saleaflet { background: url(../images/new/icons/leaflet.gif) no-repeat 0 0; }
+#saadvtool { background: url(../images/new/icons/tool.gif) no-repeat 0 0; }
+#safactsheet { background: url(../images/new/icons/faq.gif) no-repeat 0 0; }
+
+#gateben, #gatebentall { background: url(../images/new/minibanner/ben.gif) no-repeat bottom left #e8dded; }
+#gateben h3, #gateben p, #gateben a, #gatebentall h3, #gatebentall p, #gatebentall a { color: #2a0146; }
+#gateben h3 a, #gatebentall h3 a { background: url(../images/new/ben/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none;  }
+#gateben p a:hover { color: #fff; }
+#gatebentall { background-image: url(../images/new/minibanner/bentall.gif); }
+
+#gatedeb, #gatedebtall { background: url(../images/new/minibanner/deb.gif) no-repeat bottom left #ffedbd; }
+#gatedeb h3, #gatedeb p, #gatedeb a, #gatedebtall h3, #gatedebtall p, #gatedebtall a { color: #453200; }
+#gatedeb h3 a, #gatedebtall h3 a { background: url(../images/new/deb/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+#gatedeb p a:hover { color: #fff; }
+#gatedebtall { background-image: url(../images/new/minibanner/debtall.gif); }
+
+#gateedu, #gateedutall { background: url(../images/new/minibanner/edu.gif) no-repeat bottom left #BEEAF5; }
+#gateedu h3, #gateedu p, #gateedu a, #gateedutall h3, #gateedutall p, #gateedutall a { color: #013544; }
+#gateedu h3 a, #gateedutall h3 a { background: url(../images/new/edu/bullet_light.html) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+#gateedu p a:hover { color: #fff; }
+#gateedutall { background-image: url(../images/new/minibanner/edutall.gif); }
+
+#gateemp, #gateemptall { background: url(../images/new/minibanner/emp.gif) no-repeat bottom left #baebea; }
+#gateemp h3, #gateemp p, #gateemp a, #gateemptall h3, #gateemptall p, #gateemptall a { color: #002e2e; }
+#gateemp h3 a, #gateemptall h3 a { background: url(../images/new/emp/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+#gateemp p a:hover { color: #fff; }
+#gateemptall { background-image: url(../images/new/minibanner/emptall.gif); }
+
+#gatefam, #gatefamtall { background: url(../images/new/minibanner/fam.gif) no-repeat bottom left #fde3ce; }
+#gatefam h3, #gatefam p, #gatefam a, #gatefamtall h3, #gatefamtall p, #gatefamtall a { color: #351800; }
+#gatefam h3 a, #gatefamtall h3 a { background: url(../images/new/fam/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+#gatefam p a:hover { color: #fff; }
+#gatefamtall { background-image: url(../images/new/minibanner/famtall.gif); }
+
+#gategov { background: url(../images/new/minibanner/gov.gif) no-repeat bottom left #dceec5; }
+#gategov h3, #gategov p, #gategov a { color: #213701; }
+#gategov p a:hover { color: #fff; }
+#gategov h3 a { background: url(../images/new/gov/bullet_light.html) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gatehou, #gatehoutall { background: url(../images/new/minibanner/hou.gif) no-repeat bottom left #fbd4e6; }
+#gatehou h3, #gatehou p, #gatehou a, #gatehoutall h3, #gatehoutall p, #gatehoutall a { color: #300013; }
+#gatehou h3 a, #gatehoutall h3 a { background: url(../images/new/hou/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+#gatehou p a:hover { color: #fff; }
+#gatehoutall { background-image: url(../images/new/minibanner/houtall.gif); }
+
+#gateimm { background: url(../images/new/minibanner/imm.gif) no-repeat bottom left; }
+#gateimm h3, #gateimm p, #gateimm a { color: #000; }
+#gateimm p a:hover { color: #fff; }
+#gateimm h3 a { background: url(../images/new/imm/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gatehea { background: url(../images/new/minibanner/hea.gif) no-repeat bottom left; }
+#gatehea h3, #gatehea p, #gatehea a { color: #000; }
+#gatehea p a:hover { color: #fff; }
+#gatehea h3 a { background: url(../images/new/hea/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gatepol { background: url(../images/new/minibanner/pol.gif) no-repeat bottom left; }
+#gatepol h3, #gatepol p, #gatepol a { color: #000; }
+#gatepol p a:hover { color: #fff; }
+#gatepol h3 a { background: url(../images/new/pol/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gatecon { background: url(../images/new/minibanner/cons.gif) no-repeat bottom left; }
+#gatecon h3, #gatecon p, #gatecon a { color: #000; }
+#gatecon p a:hover { color: #fff; }
+#gatecon h3 a { background: url(../images/new/cons/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gatetra { background: url(../images/new/minibanner/tra.gif) no-repeat bottom left; }
+#gatetra h3, #gatetra p, #gatetra a { color: #000; }
+#gatetra p a:hover { color: #fff; }
+#gatetra h3 a { background: url(../images/new/tra/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gateenv { background: url(../images/new/minibanner/env.gif) no-repeat bottom left; }
+#gateenv h3, #gateenv p, #gateenv a { color: #000; }
+#gateenv p a:hover { color: #fff; }
+#gateenv h3 a { background: url(../images/new/env/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+#gatecom { background: url(../images/new/minibanner/com.gif) no-repeat bottom left; }
+#gatecom h3, #gatecom p, #gatecom a { color: #000; }
+#gatecom p a:hover { color: #fff; }
+#gatecom h3 a { background: url(../images/new/com/bullet_light.gif) no-repeat center right; display: inline; padding: 0 20px 0 0; font-weight: bold; margin: 0; text-decoration: none; }
+
+.ulist { list-style: disc outside; margin: 2em 4em; }
+.ulist a { text-decoration: underline; }
+.ulist li { margin: .5em 0; }
+
+.onlyPrint, .onlyPrintInline, .hide{ display: none; margin: 0; }
+.onlyDisplay{ display: block; }
+.onlyDisplayInline{ display: inline; }
+div.searchresultleaflet{ background-color: #DEF1D1; padding: 10px; }
+
+div.rtl{ direction: rtl; }
+
+label.error {
+    margin-left: 1em;
+    color: red;
+}
+
+.noscript {
+    border: thick solid red;
+    color: red;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}

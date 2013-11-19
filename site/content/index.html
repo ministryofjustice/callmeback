@@ -3,9 +3,7 @@
   <head>
     <title>Call Back Service</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="stylesheets/blank.css" type="text/css" />
     <link rel="stylesheet" href="stylesheets/default.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="stylesheets/extensions_new.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="stylesheets/print.css" type="text/css" media="print" />
   </head>
   <body>
@@ -15,62 +13,41 @@
 
       <div id="head">
 	<div id="logo" style="float:left;">
-	  <img src="/images/moj-crest.png" alt="Ministry of Justice service" /><br /> Ministry<br /> of Justice
+	  <img src="images/moj-crest.png" alt="Ministry of Justice service" /><br /> Ministry<br /> of Justice
 	</div>
-	<!--
-	    <div id="logo2">
-	      <a href="https://www.gov.uk" title="www.gov.uk" ><img src="images/govuk.gif" alt="Gov.uk" /></a>
-	    </div>
-	    -->
       </div>
 
+      <noscript>
+        <div class="noscript">
+          This tool requires a browser that supports JavaScript. You may not be able to use the system with the current browser.
+        </div>
+      </noscript>
+
       <div id="content">
-
-	<a name="skipnav"></a>
-	
 	<div>
-
-          <link href="stylesheets/ModalPopUp.css" rel="stylesheet" type="text/css" />
-          <script src="javascript/CallBack.js" type="text/javascript"></script>
-          <script src="javascript/ModalPopUp.js" type="text/javascript"></script>
-          <script src="script/logging.js" type="text/javascript"></script>
-
-          <!-- Start Modal Page html -->
-          <div id="modalPage">
-	    <div class="modalBackground">
-	    </div>
-	    <div class="modalContainer">
-	      <div class="modal">
-		<div class="modalTop"><!--<a href="javascript:hideModal('modalPage')">[X]</a>--></div>
-		<div class="modalBody">
-		  <img src="images/processing_2.gif" alt="Processing" style="text-align:center; vertical-align:middle;" /><br /><br />
-		</div>
-	      </div>
-	    </div>
-          </div>
-          <!-- End Modal Page html -->
-
-          <div id="MainDiv">
-	    <div id="FormDiv">
-	      <form class="callmeback" action="https://www.specialistadvice.net/callbackrequest/" method="post">
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+          <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+          <script src="javascript/moment.js"></script>
+          <script src="javascript/callmeback.js"></script>
+          <div id="maindiv">
+	    <div id="formdiv">
+	      <form id="callmeback" action="https://www.specialistadvice.net/callbackrequest/" method="post">
 		<fieldset title="Call me back form" >
 		  <legend><strong style="font-size:130%">Call me back </strong></legend>
 		  <p>
-		    <input type="hidden" id="CallBackDescription" value="BSS" />
-		    <input type="hidden" id="CallBackRedirect" value="http://callmeback.justice.gov.uk/success.html" />
-		    <input type="hidden" id="CallBackRedirectFail" value="http://callmeback.justice.gov.uk/fail.html" />
-		    <input type="hidden" id="CallBackOperator" value="CALLBSS" />
-		    <input type="hidden" id="302" value="true" />
+		    <input type="hidden" name="description" value="BSS" />
+		    <input type="hidden" name="redirect" value="http://callmeback.justice.gov.uk/success.html" />
+		    <input type="hidden" name="redirectfail" value="http://callmeback.justice.gov.uk/fail.html" />
+		    <input type="hidden" name="operator" value="CALLBSS" />
 		    
-		    <label for="CallBackCaller">Your name:</label> <input type="text" id="CallBackCaller" title="Your name" /><br />
-		    <label for="CallBackDestination">Your contact number:</label> <input type="text" id="CallBackDestination" title="Your contact number" /><br />
-		    <label for="CallBackEmail">Your email address (optional):</label> <input type="text" id="CallBackEmail" title="Your email address (optional)" /><br />
+		    <label for="caller">Your name:</label> <input type="text" name="caller" title="Your name is required to make this request." required/><br />
+		    <label for="destination">Your contact number:</label> <input type="text" name="destination" title="Your contact number is required." required/><br />
+		    <label for="callbackemail">Your email address (optional):</label> <input type="email" name="callbackemail" title="Please enter a valid e-mail address" /><br />
 		    <br />
 		    <strong>When would you like us to call you?</strong> <br />
 		    <br />
-		    <label for="CallBackCallDay">Day:</label> 
-		    <select id="CallBackCallDay" onchange="BuildTimeddl()" title="Day" >
-		      <option value="-1">Please Select</option>
+		    <label for="callbackcallday">Day:</label> 
+		    <select id="callbackcallday" name="callbackcallday" title="Day" >
 		      <option value="1">Monday</option>
 		      <option value="2">Tuesday</option>
 		      <option value="3">Wednesday</option>
@@ -78,9 +55,8 @@
 		      <option value="5">Friday</option>
 		      <option value="6">Saturday</option>
 		    </select><br />
-		    <label for="CallBackCallTime">Time:</label> 
-		    <select id="CallBackCallTime" title="Time" >
-		      <option value="" selected="selected">Please Select</option>
+		    <label for="callbackcalltime">Time:</label> 
+		    <select id="callbackcalltime" name="callbackcalltime" title="Time" >
 		      <option value="0900">9:00am</option>
 		      <option value="0915">9:15am</option>
 		      <option value="0930">9:30am</option>
@@ -126,9 +102,8 @@
 		      <option value="1930">7:30pm</option>
 		      <option value="1945">7:45pm</option>
 		    </select><br />
-		    <label for="CallBackLanguage">Language:</label> 
-		    <select id="CallBackLanguage" onchange="ConfigForm()" title="Language" >
-		      
+		    <label for="callbacklanguage">Language:</label> 
+		    <select id="callbacklanguage" name="callbacklanguage" title="Language" >
 		      <option value="select">Select</option>
 		      <option value="Arabic">Arabic</option>
 		      <option value="Bengali">Bengali</option>
@@ -310,24 +285,23 @@
 		      <option value="Yiddish">Yiddish</option>
 		      <option value="Yoruba">Yoruba</option>
 		      <option value="Zulu">Zulu</option>
-		      
 		    </select>
 		  </p>
 		  <br />
 		  
 		  <div id="CallBackDisabilityOptions">
-		    
-		    
 		    <strong>Do you require a call back in:</strong><br /><br />
-		    <input class="check" type="checkbox" id="CallBackMinicom" value="1" onclick="" /> <label class="right" for="CallBackMinicom">Minicom</label><br />
-		    <input class="check" type="checkbox" id="CallBackTypetalk" value="1" onclick="" /> <label class="right" for="CallBackTypetalk">Typetalk</label><br />
+                    <input type="hidden" name="callbackminicom" value="0"/>
+		    <input class="check" type="checkbox" name="callbackminicom" value="1"/> <label class="right" for="callbackminicom">Minicom</label><br />
+
+                    <input type="hidden" name="callbacktypetalk" value="0"/>
+		    <input class="check" type="checkbox" name="callbacktypetalk" value="1"/> <label class="right" for="callbacktypetalk">Typetalk</label><br />
 		  </div>
 		  <p class="submit">
-		    <input type="submit" id="CallBackFormSubmit" value="CALL ME" title="Call Me" />
-		    <input type="button" id="CallBackFormButton" value="Call Me" onclick="ProcessCallback();" style="display: none;" title="Call Me" />
+		    <input type="submit" id="submit" value="CALL ME" title="Call Me" />
 		  </p>
 		</fieldset>
-	      </form>
+              </form>
 	    </div>
 	    <div id="ResultsDiv"></div>
           </div>
@@ -339,17 +313,7 @@
 	<p>This service is only available if you are a resident of England or Wales</p>
 	<p> </p>
       </div>
-      
     </div>
-  </div>
-
-  
-
-
-
-</div>
-
-</body>
-
+  </body>
 </html>
 
