@@ -15,11 +15,18 @@ $(function() {
                 var date = moment().add('days', o);
 
                 var skip = false;
+
+                // Skip bank holidays;
                 bankHolidays.forEach(function(b) {
                     if (b.format('YYYYMMDD') == date.format('YYYYMMDD')) {
                         skip = true;
                     }
                 });
+
+                // Skip Sundays
+                if (date.weekday() == 0) {
+                    skip = true;
+                }
 
                 if (!skip) {
                     var html = t('<option value="', date.format('d'), '">', date.format("dddd (D/M/YYYY)"), '</option>');
@@ -56,7 +63,7 @@ $(function() {
             });
         }
 
-        var parent = $('#callbacktime');
+        var parent = $('#callbackcalltime');
         parent.empty();
         dates.forEach(function(d) {
             var html = t('<option value="', d.format('HHmm'), '">', d.format('HH:mm A'), '</option>');
@@ -65,9 +72,8 @@ $(function() {
     }
 
     function dayChangedHandler(e) {
-        var offset = e.target.selectedIndex;
-        var selectedDay = moment().add('days', offset);
-        populateHours(selectedDay.weekday());
+        var weekday = parseInt($(e.target).val());
+        populateHours(weekday);
     }
 
     function languageChangedHandler(e) {
@@ -90,15 +96,12 @@ $(function() {
         $('body').append(t('<script src="', url, '?', query, '"></script>'));
     }
 
-    function retrieveBankHolidays() {
-    }
-
-    $('#callbackcalldate').change(dayChangedHandler);
+    $('#callbackcallday').change(dayChangedHandler);
     $('#callbacklanguage').change(languageChangedHandler);
     
     populateDatesThisWeek();
-    retrieveBankHolidays();
-    
+    populateHours(moment().weekday());
+
     $('#callmeback').submit(submitFormHandler);
 
     // All this is one giant ugly hack.
