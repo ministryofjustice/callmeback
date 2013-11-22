@@ -1,4 +1,18 @@
 $(function() {
+    Array.prototype.forEach = function(f) {
+        for (var i = 0; i < this.length; i++) {
+            f(this[i]);
+        }
+    }
+
+    Array.prototype.map = function(f) {
+        var acc = [];
+        for (var i = 0; i < this.length; i++) {
+            acc.push(f(this[i]));
+        }
+        return acc;
+    }
+
     function t() {
         return Array.prototype.slice.call(arguments).join('');
     }
