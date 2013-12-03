@@ -118,11 +118,14 @@ $(function() {
     // All this is one giant ugly hack.
 
     window.showComplete = function(who, how, weekday, time) {
+        ga('send', 'event', 'submission', 'weekday', weekday);
+        ga('send', 'event', 'submission', 'time', time);
         $('#formdiv').hide();
         $('#maindiv').append(t("<div>Thank you. One of our advisers will contact you shortly on ", how, " on ", weekday, " at around ", time, "</div>."));
     };
 
    window.onerror = function() {
+       ga('send', 'event', 'submission', 'failure');
        $('#formdiv').hide();
        $('#maindiv').append(t("<div>An error has occurred. Please try again later.</div>"));
        return true;
