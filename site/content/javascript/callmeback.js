@@ -48,7 +48,6 @@ $(function() {
                 }
             });
             
-            $('#callmeback').validate();
         });
         
     }
@@ -103,10 +102,8 @@ $(function() {
     }
 
     function submitFormHandler(e) {
-        e.preventDefault();
-
-        var query = $(this).serialize();
-        var url = $(this).attr('action');
+        var query = $('#callmeback').serialize();
+        var url = $('#callmeback').attr('action');
         $('body').append(t('<script src="', url, '?', query, '"></script>'));
     }
 
@@ -116,7 +113,7 @@ $(function() {
     populateDatesThisWeek();
     populateHours(moment().weekday());
 
-    $('#callmeback').submit(submitFormHandler);
+    $('#callmeback').validate({debug: true, submitHandler: submitFormHandler});
 
     // All this is one giant ugly hack.
 
@@ -125,9 +122,9 @@ $(function() {
         $('#maindiv').append(t("<div>Thank you. One of our advisers will contact you shortly on ", how, " on ", weekday, " at around ", time, "</div>."));
     };
 
-    window.onerror = function() {
-        $('#formdiv').hide();
-        $('#maindiv').append(t("<div>An error has occurred. Please try again later.</div>"));
-        return false;
-    };
+   window.onerror = function() {
+       $('#formdiv').hide();
+       $('#maindiv').append(t("<div>An error has occurred. Please try again later.</div>"));
+       return true;
+   };
 });
