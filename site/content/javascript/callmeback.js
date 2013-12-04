@@ -120,6 +120,9 @@ $(function() {
     window.showComplete = function(who, how, weekday, time) {
         ga('send', 'event', 'submission', 'weekday', weekday);
         ga('send', 'event', 'submission', 'time', time);
+        var language = $('#callbacklanguage').val();
+        ga('send', 'event', 'submission', 'language', language);
+
         $('#formdiv').hide();
         $('#maindiv').append(t("<div>Thank you. One of our advisers will contact you shortly on ", how, " on ", weekday, " at around ", time, "</div>."));
     };
