@@ -102,6 +102,17 @@ $(function() {
     }
 
     function submitFormHandler(e) {
+
+        var checkboxes = $('#callmeback').find('input[type="checkbox"]');
+        $.each( checkboxes, function( key, value ) {
+            if (value.checked === false) {
+                value.value = 0;
+            } else {
+                value.value = 1;
+            }
+            $(value).attr('type', 'hidden');
+        });
+        
         var query = $('#callmeback').serialize();
         var url = $('#callmeback').attr('action');
         $('body').append(t('<script src="', url, '?', query, '"></script>'));
